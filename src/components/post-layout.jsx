@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "gatsby-link"
+import { graphql } from 'gatsby'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
