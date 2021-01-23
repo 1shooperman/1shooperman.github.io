@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "background": "#f4f4f4",
+      "paddingTop": "10px",
+    }
+  }
+>
+  <ul
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-evenly",
+        "listStyle": "none",
+      }
+    }
+  >
+    <li>
+      <a
+        aria-current="page"
+        className=""
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        href="/blog"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Blog
+      </a>
+    </li>
+  </ul>
+</div>
+`;
