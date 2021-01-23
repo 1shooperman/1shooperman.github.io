@@ -1,20 +1,50 @@
 import React from "react"
+import Link from "gatsby-link"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default () => (
+export const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="about" />
     <div>
-      <h1>About Us</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis magni
-        minima voluptatibus quasi sint aut quaerat nobis officiis, numquam
-        tempore soluta veritatis quo, architecto unde commodi molestias et
-        possimus! Repellat maiores quas temporibus ipsa? Quidem nihil ducimus
-        aspernatur possimus cupiditate!
-      </p>
+      <h1>Latest Posts</h1>
+      {data.allMarkdownRemark.edges.map(post => (
+        <div key={post.node.id}>
+          <h3>{post.node.frontmatter.title}</h3>
+          <small>
+            Posted By {post.node.frontmatter.author} on{" "}
+            {post.node.frontmatter.date}
+          </small>
+          <br />
+          <br />
+          <Link to={post.node.frontmatter.path}>Read More</Link>
+          <br />
+          <br />
+          <hr />
+        </div>
+      ))}
     </div>
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query AboutIndexQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            author
+            date
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`
+
+export default AboutPage
