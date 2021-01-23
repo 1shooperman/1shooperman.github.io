@@ -355,7 +355,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -596,4 +596,13 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  margin:1em;
 }

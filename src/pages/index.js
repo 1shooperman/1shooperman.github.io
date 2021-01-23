@@ -5,14 +5,34 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+/**
+ * <div class="row">
+    <div class="col">
+        <h2>First Column</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, nihil? Fugit corporis dignissimos earum magnam pariatur quos id ducimus dolor! Laboriosam tempora repudiandae amet dolorum assumenda. Nam, animi doloremque. Inventore!</p>
+    </div>
+    <div class="col">
+        <h2>Second Column</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, nihil? Fugit corporis dignissimos earum magnam pariatur quos id ducimus dolor! Laboriosam tempora repudiandae amet dolorum assumenda. Nam, animi doloremque. Inventore!</p>
+    </div>
+ */
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Welcome to </h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div class="row">
+      <div class="col">
+        <Image />
+      </div>
+      <div class="col">
+        <h2>Second Column</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+          nihil? Fugit corporis dignissimos earum magnam pariatur quos id
+          ducimus dolor! Laboriosam tempora repudiandae amet dolorum assumenda.
+          Nam, animi doloremque. Inventore!
+        </p>
+      </div>
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
     </div>
   </Layout>
 )

@@ -7,26 +7,18 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { siteTitle } from "./queries/metadata"
 
 import Header from "./header"
 import Menu from "./menu"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const { site } = siteTitle
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={site.siteMetadata?.title || `Title`} />
       <Menu />
       <div
         style={{
@@ -38,7 +30,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `2rem`,
+            marginTop: `1rem`,
           }}
         >
           © {new Date().getFullYear()}, Built with
