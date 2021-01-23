@@ -20,16 +20,17 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           }
         }
       }
-    }`).then(res => {
-      if(res.errors) {
-        return Promise.reject(res.errors)
-      }
+    }
+  `).then(res => {
+    if (res.errors) {
+      return Promise.reject(res.errors)
+    }
 
-      res.data.allMarkdownRemark.edges.forEach(({node}) => {
-        createPage({
-          path: node.frontmatter.path,
-          component: postTemplate
-        })
-      });
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: postTemplate,
+      })
     })
+  })
 }

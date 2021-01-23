@@ -5,9 +5,7 @@ import Header from "../header"
 
 describe("Header", () => {
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<Header siteTitle="Brandon Shoop" />)
-      .toJSON()
+    const tree = renderer.create(<Header siteTitle="Brandon Shoop" />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

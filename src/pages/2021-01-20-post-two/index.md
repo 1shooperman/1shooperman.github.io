@@ -5,5 +5,4 @@ author: "Foo Program"
 title: "My Second Gatsby Post"
 ---
 
-
 This is my **second blog** post in Gatsby

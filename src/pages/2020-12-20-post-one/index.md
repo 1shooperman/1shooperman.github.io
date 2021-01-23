@@ -5,5 +5,4 @@ author: "Foo Program"
 title: "My First Gatsby Post"
 ---
 
-
 This is my very **first blog** post in Gatsby

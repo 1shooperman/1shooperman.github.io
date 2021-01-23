@@ -3,7 +3,7 @@ module.exports = {
     title: `Brandon Shoop`,
     description: `A simple static resume site powered by Gatsby.`,
     author: `Brandon Shoop`,
-    siteUrl: `https://1shooperman.github.io/`
+    siteUrl: `https://1shooperman.github.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,8 +18,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
+        path: `${__dirname}/src/pages`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -39,6 +39,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
   ],
 }

@@ -15,7 +15,7 @@ describe("Image", () => {
             aspectRatio: 1,
             src: "string",
             srcSet: "string",
-            sizes: "string"
+            sizes: "string",
           },
         },
       },
@@ -23,11 +23,13 @@ describe("Image", () => {
     const tree = renderer.create(<Image />).toJSON()
     gatsby.useStaticQuery = orig
 
-    expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot()
 
-    const { props: { className } } = tree;
+    const {
+      props: { className },
+    } = tree
 
-    expect(className).toEqual(' gatsby-image-wrapper')
+    expect(className).toEqual(" gatsby-image-wrapper")
   })
 
   it("prints picture not found", () => {

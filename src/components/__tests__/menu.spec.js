@@ -5,9 +5,7 @@ import Menu from "../menu"
 
 describe("Menu", () => {
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<Menu />)
-      .toJSON()
+    const tree = renderer.create(<Menu />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -16,7 +16,5 @@ module.exports = {
   verbose: true,
   bail: 1,
   collectCoverage: true,
-  collectCoverageFrom: [
-    "src/**/*.{js,jsx}"
-  ],
+  collectCoverageFrom: ["src/**/*.{js,jsx}"],
 }
