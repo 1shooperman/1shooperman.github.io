@@ -2,3 +2,6 @@
 package.json
 package-lock.json
 public
+coverage
+node_modules
+.vscode
