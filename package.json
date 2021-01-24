@@ -40,7 +40,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "build:production": "gatsby clean && gatsby build && cp -R public docs",
+    "build:production": "gatsby clean && rm -rf ./docs && gatsby build && cp -R ./public ./docs",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
@@ -48,8 +48,7 @@
     "clean": "gatsby clean",
     "test": "jest --colors",
     "update:snapshot": "jest --updateSnapshot",
-    "update:modules": "npm cache verify && npm update",
-    "update:release": "npm build && cp -R dist docs"
+    "update:modules": "npm cache verify && npm update"
   },
   "repository": {
     "type": "git",

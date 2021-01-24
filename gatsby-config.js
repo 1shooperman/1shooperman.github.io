@@ -39,6 +39,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
+    // should be included AFTER the gatsby-plugin-manifest plugin
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-fontawesome-css`,
