@@ -17,7 +17,7 @@ export default () => (
 
 const IconColumn = ({ icon, link }) => (
   <div class="col">
-    <a href={link} rel="nofollow,noreferrer" target="_blank" style={IconStyles}>
+    <a href={link} rel="nofollow noreferrer" target="_new" style={IconStyles}>
       <FontAwesomeIcon icon={icon} size="3x" />
     </a>
   </div>

@@ -9,12 +9,11 @@ export const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="about" />
     <div>
-      <h1>Latest Posts</h1>
+      <h1>Random Info About Me</h1>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>{post.node.frontmatter.title}</h3>
           <small>
-            Posted By {post.node.frontmatter.author} on{" "}
             {post.node.frontmatter.date}
           </small>
           <br />

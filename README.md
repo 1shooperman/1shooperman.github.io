@@ -1,1 +1,1 @@
-# Gatsby based personal site
+# Gatsby based personal cv site

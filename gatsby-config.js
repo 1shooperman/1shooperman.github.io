@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `personal-site`,
-        short_name: `personal`,
+        name: `brandon-shoop-cv`,
+        short_name: `brandon-cv`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

@@ -25,7 +25,7 @@ export default function Template({ data }) {
           <Link to="/about">Go Back</Link>
           <h1>{post.frontmatter.title}</h1>
           <h4>
-            Posted by {post.frontmatter.author} on {post.frontmatter.date}
+            {post.frontmatter.date}
           </h4>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </main>
@@ -36,7 +36,7 @@ export default function Template({ data }) {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com" rel="nofollow noreferrer" target="_new">Gatsby</a>
         </footer>
       </div>
     </div>
