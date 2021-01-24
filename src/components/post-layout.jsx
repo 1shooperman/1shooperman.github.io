@@ -2,15 +2,13 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
 
-import { siteTitle } from "./queries/metadata"
-
 import Header from "./header"
 import Menu from "./menu"
 import "./layout.css"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
-  const { site } = siteTitle
+  const { site } = data
 
   return (
     <div>
@@ -54,6 +52,11 @@ export const postQuery = graphql`
         title
         author
         date
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
