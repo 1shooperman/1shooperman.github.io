@@ -1,9 +1,9 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import IconBar from "../components/icon-bar"
 
 const IndexPage = () => (
   <Layout>
@@ -13,12 +13,19 @@ const IndexPage = () => (
         <Image />
       </div>
       <div class="col">
-        <h2>Second Column</h2>
+        <h2>Brandon Shoop (he/him)</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-          nihil? Fugit corporis dignissimos earum magnam pariatur quos id
-          ducimus dolor! Laboriosam tempora repudiandae amet dolorum assumenda.
-          Nam, animi doloremque. Inventore!
+          I am an experienced Software Development Manager with a demonstrated
+          history of success in internet technology. Skilled in Web
+          Applications, Databases, Mobile Applications, Agile Methodologies, and
+          Team Building / Facilitation.
+        </p>
+        <p>
+          I am a strong engineering professional with a Bachelor of Science in
+          Computer Science from the <a href="https://www.umw.edu/">University of Mary Washington.</a>
+        </p>
+        <p>
+          <IconBar />
         </p>
       </div>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
