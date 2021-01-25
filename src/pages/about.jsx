@@ -8,8 +8,8 @@ import SEO from "../components/seo"
 export const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="about" />
-    <div>
-      <h1>Random Info About Me</h1>
+    <div style={{marginTop:"1.5em"}}>
+      {/* <h1>Random Info About Me</h1> */}
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>{post.node.frontmatter.title}</h3>
@@ -30,7 +30,7 @@ export const AboutPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query AboutIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___order}) {
       edges {
         node {
           id
@@ -39,6 +39,7 @@ export const pageQuery = graphql`
             date
             path
             title
+            order
           }
         }
       }

@@ -13,9 +13,15 @@ const IndexPage = () => (
         <Image />
       </div>
       <div class="col">
-        <h2>Brandon Shoop (he/him)</h2>
+        <h2>Brandon Shoop</h2>
         <p>
-          Sorry about the mess! I spun up this (Gatsby) site to point my domain to, but I haven't quite settled on the design.
+          I am a software and management professional, having operated as an
+          individual contributor, lead, manager, and director. I provide value
+          to teams as a coach and mentor, and to organizations by identifing
+          both short- and long-term technological solutions.
+        </p>
+        <p>
+          I consider myself a jack-of-all (and master of very little.)
         </p>
         <p>
           <IconBar />
