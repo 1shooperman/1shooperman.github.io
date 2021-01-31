@@ -23,7 +23,13 @@ export default () => (
         <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/brandonshoop/" rel="nofollow noreferrer" target="_new">Contact / CV</a>
+        <a
+          href="https://www.linkedin.com/in/brandonshoop/"
+          rel="nofollow noreferrer"
+          target="_new"
+        >
+          Contact / CV
+        </a>
       </li>
     </ul>
   </div>

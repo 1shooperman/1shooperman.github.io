@@ -1,0 +1,11 @@
+.gr_grid_container {
+  margin: 1.45rem;
+}
+
+.gr_grid_book_container {
+  float: left;
+  width: 5em;
+  height: 7.5em;
+  padding: 0;
+  overflow: hidden;
+}
