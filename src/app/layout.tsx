@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Brandon Shoop',
   description: 'Personal website and blog of Brandon Shoop',
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <div className="space-x-4">
               <a
-                href="https://linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/brandonshoop/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-gray-600 hover:text-blue-600"
@@ -31,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href="https://github.com/your-github"
+                href="https://github.com/1shooperman/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl text-gray-600 hover:text-gray-900"
