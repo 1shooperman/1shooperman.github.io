@@ -93,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="max-w-7xl mx-auto p-4">{children}</main>
         <footer className="text-center py-4 text-gray-600">
-          <div>© {currentYear} Brandon Shoop</div>
+          <div>© {currentYear} AGL Consulting LLC</div>
           <div className="mt-2">
             <Link href="/privacy" className="text-blue-600 hover:text-blue-800">
               Privacy Policy
