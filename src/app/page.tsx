@@ -15,7 +15,7 @@ export default async function Home() {
           <h2 className="text-2xl font-bold mb-4">Welcome</h2>
           <p className="mb-4">
             I put this together because I need a place to put my thoughts and centralize content for personal projects.
-            This site is built with Next.js, Tailwind, and TypeScript. It's hosted on Github Pages and was largely built using <Link style={{color: 'blue'}} href="https://www.cursor.com/" target="_blank" >Cursor AI</Link>.
+            This site is built with Next.js, Tailwind, and TypeScript. It&apos;s hosted on Github Pages and was largely built using <Link style={{color: 'blue'}} href="https://www.cursor.com/" target="_blank" >Cursor AI</Link>.
           </p>
         </div>
 

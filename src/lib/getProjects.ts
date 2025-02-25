@@ -59,7 +59,7 @@ export async function getProjectById(id: string): Promise<Project | null> {
       contentHtml,
       ...(matterResult.data as Omit<Project, 'id' | 'contentHtml'>),
     };
-  } catch (e) {
+  } catch {
     return null;
   }
 } 

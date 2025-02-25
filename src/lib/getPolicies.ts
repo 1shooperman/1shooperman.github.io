@@ -44,7 +44,7 @@ export async function getPolicyById(id: string): Promise<Policy | null> {
       ).join(' '),
       content,
     };
-  } catch (e) {
+  } catch {
     return null;
   }
 }

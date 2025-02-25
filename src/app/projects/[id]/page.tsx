@@ -1,5 +1,4 @@
 import { getProjectById, getSortedProjects, Project } from "@/lib/getProjects";
-import Link from "next/link";
 
 export async function generateStaticParams() {
   const projects = await getSortedProjects();

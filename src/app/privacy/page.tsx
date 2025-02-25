@@ -5,7 +5,7 @@ export default function PrivacyPage() {
       <div className="bg-white p-6 rounded-lg shadow prose">
         <h2>Overview</h2>
         <p>
-          This privacy policy describes how brandonshoop.com ("the Site") handles information. 
+          This privacy policy describes how brandonshoop.com (&quot;the Site&quot;) handles information. 
           We believe in minimizing data collection and being transparent about any data we do collect.
         </p>
 
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         <h2>Third-Party Services</h2>
         <p>
           The Site is hosted on GitHub Pages and uses their standard hosting services. 
-          Please refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" className="text-blue-600 hover:text-blue-800">GitHub's Privacy Statement</a> for 
+          Please refer to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" className="text-blue-600 hover:text-blue-800">GitHub&apos;s Privacy Statement</a> for 
           information about their data practices.
         </p>
 
