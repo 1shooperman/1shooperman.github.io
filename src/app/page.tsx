@@ -5,9 +5,9 @@ export default function Home() {
   const posts = getSortedPosts();
 
   return (
-    <div className="flex gap-8 mt-8">
+    <div className="flex flex-col lg:flex-row gap-8 mt-8">
       {/* Main Content Column */}
-      <div className="flex-grow w-2/3 space-y-8">
+      <div className="w-full lg:w-2/3 space-y-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-bold mb-4">Welcome</h2>
           <p className="mb-4">
@@ -82,13 +82,11 @@ export default function Home() {
       </div>
 
       {/* Sidebar */}
-      <div className="w-1/3">
+      <div className="w-full lg:w-1/3 space-y-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-xl font-bold mb-4">
-            <Link
-              href="/projects/"
-            >
-              Latest Posts
+            <Link href="/projects/">
+              Posts
             </Link>
           </h2>
           <ul className="space-y-3">
@@ -106,6 +104,24 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Currently Reading Section */}
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h2 className="text-xl font-bold mb-4">Currently Reading</h2>
+          <div className="space-y-3">
+            <a
+              href="https://www.goodreads.com/book/show/498886.Grinding_It_Out"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:bg-gray-50 p-2 -mx-2 rounded transition"
+            >
+              <h3 className="font-medium text-blue-600 hover:text-blue-800">
+                Grinding It Out: The Making of McDonald's
+              </h3>
+              <p className="text-sm text-gray-500">by Ray Kroc</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
