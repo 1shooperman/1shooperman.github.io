@@ -1,5 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Brandon Shoop',
@@ -19,17 +20,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-gray-100 text-gray-900">
-        <header className="bg-white shadow-sm">
+        <header className="bg-gray-900 shadow-sm">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" className="text-4xl font-bold hover:text-gray-700 transition">
-              Brandon Shoop
+            <Link href="/" className="flex items-center space-x-3 hover:text-gray-300 transition">
+              <Image
+                src="/siteicon.png"
+                alt="Site Icon"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-4xl font-bold text-gray-100">Brandon Shoop</span>
             </Link>
             <div className="space-x-4">
               <a
                 href="https://www.linkedin.com/in/brandonshoop/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl text-gray-600 hover:text-blue-600"
+                className="text-2xl text-gray-100 hover:text-gray-300"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -37,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 href="https://github.com/1shooperman/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl text-gray-600 hover:text-gray-900"
+                className="text-2xl text-gray-100 hover:text-gray-300"
               >
                 <i className="fab fa-github"></i>
               </a>
