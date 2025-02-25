@@ -3,7 +3,8 @@
 Last updated: 25-Feb-2025
 
 ## Introduction
-[Your App Name] ("we" or "us" or "our") respects the privacy of our users ("user" or "you"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").
+[Your App Name] ("we" or "us" or "our") respects the privacy of our users ("user" or "you").
+This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").
 
 ## Information We Collect
 The App collects the following data:
