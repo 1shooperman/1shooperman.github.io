@@ -24,8 +24,12 @@ export default function Home() {
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-2xl font-bold mb-4">Recent Projects</h2>
-          
+          <h2 className="text-2xl font-bold mb-4">
+            <Link href="/projects/">
+              Projects
+            </Link>
+          </h2>
+
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -65,8 +69,9 @@ export default function Home() {
                 Pack my box with five dozen liquor jugs. A comprehensive web
                 solution delivering value through innovative features.
               </p>
+              <hr />
               <Link
-                href="/projects/mobile-app"
+                href="/projects/"
                 className="text-blue-600 hover:text-blue-800"
               >
                 More...
@@ -79,7 +84,13 @@ export default function Home() {
       {/* Sidebar */}
       <div className="w-1/3">
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-bold mb-4">Latest Posts</h2>
+          <h2 className="text-xl font-bold mb-4">
+            <Link
+              href="/projects/"
+            >
+              Latest Posts
+            </Link>
+          </h2>
           <ul className="space-y-3">
             {posts.map((post) => (
               <li key={post.slug}>
