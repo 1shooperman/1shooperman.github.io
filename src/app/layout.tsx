@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 alt="Site Icon"
                 width={40}
                 height={40}
+                style={{ width: '40px', height: '40px' }}
                 className="rounded-full"
               />
               <span className="text-4xl font-bold text-gray-100">Brandon Shoop</span>
