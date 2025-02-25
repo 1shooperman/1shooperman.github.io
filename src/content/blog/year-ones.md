@@ -1,6 +1,6 @@
 ---
-title: "A Bunch of Year Ones"
-date: "2018-07-18"
+title: "A Bunch of 'Year Ones's"
+date: "2018-07-01"
 excerpt: "When I stepped into my first development role in 2005, I thought I had made it.."
 ---
 

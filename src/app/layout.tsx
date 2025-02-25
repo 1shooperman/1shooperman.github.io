@@ -11,6 +11,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <html lang="en">
       <head>
@@ -33,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               />
               <span className="text-4xl font-bold text-gray-100">Brandon Shoop</span>
             </Link>
-            <div className="space-x-4">
+            <div className="flex items-center space-x-4">
               <a
                 href="https://www.linkedin.com/in/brandonshoop/"
                 target="_blank"
@@ -50,10 +52,54 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 <i className="fab fa-github"></i>
               </a>
+              <div className="relative group">
+                <button
+                  className="text-2xl text-gray-100 hover:text-gray-300 p-2"
+                  aria-label="Navigation Menu"
+                >
+                  <i className="fas fa-bars"></i>
+                </button>
+                <div className="absolute right-0 top-[80%] pt-4 w-48 invisible group-hover:visible">
+                  <div className="bg-white rounded-lg shadow-lg py-2">
+                    <Link
+                      href="/"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/blog"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    >
+                      Posts
+                    </Link>
+                    <Link
+                      href="/projects"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    >
+                      Projects
+                    </Link>
+                    <Link
+                      href="/policies"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    >
+                      Policies
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </header>
         <main className="max-w-7xl mx-auto p-4">{children}</main>
+        <footer className="text-center py-4 text-gray-600">
+          <div>© {currentYear} Brandon Shoop</div>
+          <div className="mt-2">
+            <Link href="/privacy" className="text-blue-600 hover:text-blue-800">
+              Privacy Policy
+            </Link>
+          </div>
+        </footer>
       </body>
     </html>
   );

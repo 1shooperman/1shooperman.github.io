@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { getSortedPosts } from "@/lib/getPosts";
+import { getSortedProjects } from "@/lib/getProjects";
 
-export default function Home() {
+export default async function Home() {
   const posts = getSortedPosts();
+  const projects = await getSortedProjects();
+  const featuredProjects = projects.slice(0, 2); // Show only first 2 projects
 
   return (
     <div className="flex flex-col lg:flex-row gap-8 mt-8">
@@ -11,72 +14,43 @@ export default function Home() {
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-bold mb-4">Welcome</h2>
           <p className="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I put this together because I need a place to put my thoughts and centralize content for personal projects.
+            This site is built with Next.js, Tailwind, and TypeScript. It's hosted on Github Pages and was largely built using <Link style={{color: 'blue'}} href="https://www.cursor.com/" target="_blank" >Cursor AI</Link>.
           </p>
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-bold mb-4">
-            <Link href="/projects/">
-              Projects
-            </Link>
+            <Link href="/projects/">Projects</Link>
           </h2>
-
           <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Mobile App Project
-              </h3>
-              <p className="mb-3 text-gray-600">
-                The quick brown fox jumps over the lazy dog. This innovative mobile
-                application provides seamless integration across platforms.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://apps.apple.com/your-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 flex items-center space-x-1"
-                >
-                  <i className="fab fa-app-store text-lg"></i>
-                  <span>App Store</span>
-                </a>
-                <a
-                  href="https://play.google.com/store/your-app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-800 flex items-center space-x-1"
-                >
-                  <i className="fab fa-google-play text-lg"></i>
-                  <span>Play Store</span>
-                </a>
+            {featuredProjects.map((project) => (
+              <div key={project.id}>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {project.title}
+                </h3>
+                <p className="mb-3 text-gray-600">{project.description}</p>
+                <div className="flex space-x-4">
+                  {project.links?.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 flex items-center space-x-1"
+                    >
+                      {link.text === "App Store" && <i className="fab fa-app-store text-lg"></i>}
+                      {link.text === "Play Store" && <i className="fab fa-google-play text-lg"></i>}
+                      <span>{link.text}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Web Development Project
-              </h3>
-              <p className="mb-3 text-gray-600">
-                Pack my box with five dozen liquor jugs. A comprehensive web
-                solution delivering value through innovative features.
-              </p>
-              <hr />
-              <Link
-                href="/projects/"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                More...
-              </Link>
-            </div>
+            ))}
+            <hr />
+            <Link href="/projects/" className="text-blue-600 hover:text-blue-800">
+              More...
+            </Link>
           </div>
         </div>
       </div>
@@ -85,7 +59,7 @@ export default function Home() {
       <div className="w-full lg:w-1/3 space-y-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-xl font-bold mb-4">
-            <Link href="/projects/">
+            <Link href="/blog/">
               Posts
             </Link>
           </h2>
@@ -107,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* Currently Reading Section */}
-        <div className="bg-white p-6 rounded-lg shadow">
+        {/* <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-xl font-bold mb-4">Currently Reading</h2>
           <div className="space-y-3">
             <a
@@ -122,7 +96,7 @@ export default function Home() {
               <p className="text-sm text-gray-500">by Ray Kroc</p>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
