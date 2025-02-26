@@ -6,25 +6,27 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }> | { slug: string };
-}) {
-  const resolvedParams = await params;
-  const post = await getPostBySlug(resolvedParams.slug);
+type Params = Promise<{ slug: string[] }>;
+
+export default async function BlogPostPage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug[0]);
+
+  if (!post) {
+    return (
+      <div className="max-w-4xl mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-8">Post Not Found</h1>
+        <p>The requested post could not be found.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto py-8">
-            <div>
-  
-          <Link
-            href={`/blog`}
-            className="text-blue-600 hover:text-blue-800"
-          >
-            ← Back
-          </Link>
-
+      <div>
+        <Link href={`/blog`} className="text-blue-600 hover:text-blue-800">
+          ← Back
+        </Link>
       </div>
       <div className="bg-white p-6 rounded-lg shadow">
         <h1 className="text-3xl font-bold mb-2">{post.title}</h1>

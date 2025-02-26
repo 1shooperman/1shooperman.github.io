@@ -3,14 +3,12 @@ import { getSortedPosts } from "@/lib/getPosts";
 
 const POSTS_PER_PAGE = 5;
 
-export default async function BlogPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }> | { page?: string }
-}) {
-  const resolvedParams = await searchParams;
+type SearchParams = Promise<{ page?: string }>;
+
+export default async function BlogPage({ searchParams }: { searchParams: SearchParams }) {
+  const { page } = await searchParams;
   const posts = getSortedPosts();
-  const currentPage = Number(resolvedParams.page) || 1;
+  const currentPage = Number(page) || 1;
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
   
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;

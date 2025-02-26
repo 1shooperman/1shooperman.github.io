@@ -1,17 +1,15 @@
-import { getProjectById, getSortedProjects, Project } from "@/lib/getProjects";
+import { getProjectById, getSortedProjects } from "@/lib/getProjects";
+
+type Params = Promise<{ id: string[] }>;
 
 export async function generateStaticParams() {
   const projects = await getSortedProjects();
-  return projects.map((project: Project) => ({ id: project.id }));
+  return projects.map((project) => ({ id: project.id }));
 }
 
-type Props = {
-  params: Promise<{ id: string }> | { id: string };
-};
-
-export default async function ProjectPage({ params }: Props) {
-  const resolvedParams = await params;
-  const project = await getProjectById(resolvedParams.id);
+export default async function ProjectPage({ params }: { params: Params }) {
+  const { id } = await params;
+  const project = await getProjectById(id[0]);
 
   if (!project) {
     return <div style={{ whiteSpace: 'pre' }}>Project Not Found</div>;
