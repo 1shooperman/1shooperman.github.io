@@ -3,6 +3,17 @@ import { getSortedPosts } from "@/lib/getPosts";
 
 const POSTS_PER_PAGE = 5;
 
+export const dynamic = 'force-static';
+
+// Generate static pages for each page number
+export async function generateStaticParams() {
+  const posts = getSortedPosts();
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+  return Array.from({ length: totalPages }, (_, i) => ({
+    page: (i + 1).toString(),
+  }));
+}
+
 type SearchParams = Promise<{ page?: string }>;
 
 export default async function BlogPage({ searchParams }: { searchParams: SearchParams }) {
