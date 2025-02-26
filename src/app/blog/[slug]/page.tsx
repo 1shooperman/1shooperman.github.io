@@ -6,11 +6,11 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-type Params = Promise<{ slug: string[] }>;
+type Params = Promise<{ slug: string }>;
 
 export default async function BlogPostPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const post = await getPostBySlug(slug[0]);
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return (

@@ -1,6 +1,6 @@
 import { getPolicyById, getPolicies } from "@/lib/getPolicies";
 
-type Params = Promise<{ id: string[] }>;
+type Params = Promise<{ id: string }>;
 
 export async function generateStaticParams() {
   const policies = await getPolicies();
@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 export default async function PolicyPage({ params }: { params: Params }) {
   const { id } = await params;
-  const policy = await getPolicyById(id[0]);
+  const policy = await getPolicyById(id);
 
   if (!policy) {
     return <div style={{ whiteSpace: 'pre' }}>Policy Not Found</div>;

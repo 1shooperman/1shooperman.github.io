@@ -1,6 +1,6 @@
 import { getProjectById, getSortedProjects } from "@/lib/getProjects";
 
-type Params = Promise<{ id: string[] }>;
+type Params = Promise<{ id: string }>;
 
 export async function generateStaticParams() {
   const projects = await getSortedProjects();
@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
-  const project = await getProjectById(id[0]);
+  const project = await getProjectById(id);
 
   if (!project) {
     return <div style={{ whiteSpace: 'pre' }}>Project Not Found</div>;
