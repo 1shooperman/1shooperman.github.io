@@ -17,8 +17,6 @@ links:
     url: "https://apps.apple.com/TBD"
   - text: "Play Store"
     url: "https://play.google.com/store/TBD"
-  - text: "Lindsay Dare Shoop"
-    url: "https://www.lindsaydareshoop.com/"
 ---
 
 ## From Fatherhood to Fitness: Why I’m Building a Workout Tracker for My Son
@@ -27,7 +25,7 @@ My eldest son reminds me a lot of myself — in his creativity, his independence
 
 In my early twenties, I weighed nearly 300 pounds. It took years of trial, error, and persistence to turn my relationship with fitness around. That experience left me with two things: a deep respect for the process and a commitment to helping others — especially my kids — build a healthier foundation sooner than I did.
 
-With guidance from my sister, a former Olympic athlete turned coach, I designed a simple, effective weight training routine my son could follow to build strength, confidence, and consistency. The challenge wasn’t the workout — it was getting him to track it.
+With guidance from my [sister](https://www.lindsaydareshoop.com/), a former Olympic athlete turned coach, I designed a simple, effective weight training routine my son could follow to build strength, confidence, and consistency. The challenge wasn’t the workout — it was getting him to track it.
 
 ## Building a Tracker, One Rep at a Time
 
