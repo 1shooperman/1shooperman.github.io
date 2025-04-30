@@ -27,7 +27,9 @@ export default async function Home() {
             {featuredProjects.map((project) => (
               <div key={project.id}>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {project.title}
+                  <Link href={`/projects/${project.id}`}>
+                    {project.title}
+                  </Link>
                 </h3>
                 <p className="mb-3 text-gray-600">{project.description}</p>
                 <div className="flex space-x-4">
