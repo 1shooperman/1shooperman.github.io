@@ -28,7 +28,7 @@ export default async function Home() {
               <div key={project.id}>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   <Link href={`/projects/${project.id}`}>
-                    {project.title}
+                    {project.title}<i className="fa-solid fa-link text-lg"></i>
                   </Link>
                 </h3>
                 <p className="mb-3 text-gray-600">{project.description}</p>
@@ -44,7 +44,7 @@ export default async function Home() {
                       {link.text === "App Store" && <i className="fab fa-app-store text-lg"></i>}
                       {link.text === "Play Store" && <i className="fab fa-google-play text-lg"></i>}
                       {link.text === "Github" && <i className="fa-brands fa-github text-lg"></i>}
-                      <span>{link.text}</span><i className="fa-solid fa-link text-lg"></i>
+                      <span>{link.text}</span>
                     </a>
                   ))}
                 </div>
