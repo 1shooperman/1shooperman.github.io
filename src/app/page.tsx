@@ -44,7 +44,7 @@ export default async function Home() {
                       {link.text === "App Store" && <i className="fab fa-app-store text-lg"></i>}
                       {link.text === "Play Store" && <i className="fab fa-google-play text-lg"></i>}
                       {link.text === "Github" && <i className="fa-brands fa-github text-lg"></i>}
-                      <span>{link.text}</span>
+                      <span>{link.text}</span><i className="fa-solid fa-link text-lg"></i>
                     </a>
                   ))}
                 </div>
