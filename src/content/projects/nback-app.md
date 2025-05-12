@@ -13,12 +13,12 @@ technologies:
   # - "Firebase"
   #- "Redux"
 links:
-  - text: "App Store"
-    url: "https://apps.apple.com/TBD"
-  - text: "Play Store"
-    url: "https://play.google.com/store/TBD"
-  - text: "Github"
-    url: "https://github.com/AGLFlorida/n-back"
+  # - text: "App Store"
+  #   url: "https://apps.apple.com/TBD"
+  # - text: "Play Store"
+  #   url: "https://play.google.com/store/TBD"
+  # - text: "Github"
+  #   url: "https://github.com/AGLFlorida/n-back"
 ---
 
 ## Restarting with Purpose: Building a Better N-Back Experience

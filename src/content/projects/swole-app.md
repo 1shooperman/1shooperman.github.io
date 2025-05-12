@@ -13,10 +13,10 @@ technologies:
   # - "Firebase"
   #- "Redux"
 links:
-  - text: "App Store"
-    url: "https://apps.apple.com/TBD"
-  - text: "Play Store"
-    url: "https://play.google.com/store/TBD"
+  # - text: "App Store"
+  #   url: "https://apps.apple.com/TBD"
+  # - text: "Play Store"
+  #   url: "https://play.google.com/store/TBD"
 ---
 
 ## From Fatherhood to Fitness: Why I’m Building a Workout Tracker for My Son
