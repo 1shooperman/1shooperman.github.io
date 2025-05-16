@@ -1,2 +1,0 @@
-env:
-  NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }} 
