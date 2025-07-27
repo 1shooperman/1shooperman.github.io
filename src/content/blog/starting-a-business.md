@@ -1,6 +1,6 @@
 ---
 title: "So you want to be a hero?"
-date: "2025-4-30"
+date: "2025-04-30"
 excerpt: "I started a business. Now what?"
 ---
 

@@ -1,0 +1,6 @@
+# /.well-known/security.txt
+Contact: mailto:security@aglflorida.com
+Expires: 2025-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://aglflorida.com/.well-known/security.txt
+Policy: https://aglflorida.com/security

@@ -1,0 +1,2 @@
+# /.well-known/dnt-policy.txt
+Policy: https://brandonshoop.com/privacy
