@@ -62,7 +62,7 @@ export default async function Home() {
       <div className="w-full lg:w-1/3 space-y-8">
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-xl font-bold mb-4">
-            <Link href="/blog/">
+            <Link href="/blog/page/1">
               Posts
             </Link>
           </h2>
@@ -83,7 +83,7 @@ export default async function Home() {
           </ul>
           <br />
           <hr />
-          <Link href="/blog/" className="text-blue-600 hover:text-blue-800">
+          <Link href="/blog/page/1" className="text-blue-600 hover:text-blue-800">
             More...
           </Link>
         </div>
