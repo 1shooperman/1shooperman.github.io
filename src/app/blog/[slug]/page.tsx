@@ -1,6 +1,5 @@
 import { getPostBySlug, getSortedPosts } from "@/lib/getPosts";
 import { metadataFactory } from "@/lib/metadata";
-import { redirect } from "next/navigation";
 
 export async function generateStaticParams() {
   const posts = getSortedPosts();
@@ -18,7 +17,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const { slug } = await params;
 
   if (slug === "page") {
-    redirect("/blog/page/1");
+    return (
+      <div style={{ display: "none" }}>
+        <meta httpEquiv="refresh" content="0; url=/blog/page/1" />
+      </div>
+    );
   }
 
   const post = await getPostBySlug(slug);
