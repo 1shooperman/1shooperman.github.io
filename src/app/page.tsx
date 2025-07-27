@@ -28,7 +28,7 @@ export default async function Home() {
               <div key={project.id}>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   <Link href={`/projects/${project.id}`}>
-                    {project.title}<i className="fa-solid fa-link text-lg"></i>
+                    {project.title} <i className="fa-solid fa-link text-lg"></i>
                   </Link>
                 </h3>
                 <p className="mb-3 text-gray-600">{project.description}</p>
@@ -43,7 +43,7 @@ export default async function Home() {
                     >
                       {link.text === "App Store" && <i className="fab fa-app-store text-lg"></i>}
                       {link.text === "Play Store" && <i className="fab fa-google-play text-lg"></i>}
-                      {link.text === "Github" && <i className="fa-brands fa-github text-lg"></i>}
+                      {link.text === "Github" && <i className="fab fa-github text-lg"></i>}
                       <span>{link.text}</span>
                     </a>
                   ))}
@@ -81,25 +81,12 @@ export default async function Home() {
               </li>
             ))}
           </ul>
+          <br />
+          <hr />
+          <Link href="/blog/" className="text-blue-600 hover:text-blue-800">
+            More...
+          </Link>
         </div>
-
-        {/* Currently Reading Section */}
-        {/* <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-xl font-bold mb-4">Currently Reading</h2>
-          <div className="space-y-3">
-            <a
-              href="https://www.goodreads.com/book/show/498886.Grinding_It_Out"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block hover:bg-gray-50 p-2 -mx-2 rounded transition"
-            >
-              <h3 className="font-medium text-blue-600 hover:text-blue-800">
-                Grinding It Out: The Making of McDonald's
-              </h3>
-              <p className="text-sm text-gray-500">by Ray Kroc</p>
-            </a>
-          </div>
-        </div> */}
       </div>
     </div>
   );

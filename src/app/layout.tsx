@@ -2,13 +2,24 @@ import './globals.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const metadata = {
-  title: 'Brandon Shoop',
-  description: 'Personal website and blog of Brandon Shoop',
-  icons: {
-    icon: '/favicon.png',
-  },
-};
+import { Breadcrumbs } from '@/lib/Breadcrumbs';
+
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  return {
+    title: 'Brandon Shoop: Blog',
+    description: 'This is the personal blog of Brandon Shoop, founder AGL consulting.',
+    alternates: {
+      canonical: baseUrl,
+    },
+    icons: {
+      icon: '/favicon.png',
+    },
+  };
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const currentYear = new Date().getFullYear();
@@ -20,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       </head>
       <body className="bg-gray-100 text-gray-900">
         <header className="bg-gray-900 shadow-sm">
@@ -79,25 +91,40 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     >
                       Projects
                     </Link>
-                    <Link
-                      href="/policies"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                    >
-                      Policies
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </header>
-        <main className="max-w-7xl mx-auto p-4">{children}</main>
+        <main className="max-w-7xl mx-auto p-4">
+          <Breadcrumbs />
+          {children}
+        </main>
         <footer className="text-center py-4 text-gray-600">
-          <div>© {currentYear} AGL Consulting LLC</div>
+          <div>{'\u00A9'} {currentYear} AGL Consulting LLC</div>
           <div className="mt-2">
             <Link href="/privacy" className="text-blue-600 hover:text-blue-800">
               Privacy Policy
             </Link>
+            {" | "}
+            <a
+              href="https://aglflorida.com/security"
+              className="text-blue-600 hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Security Policy
+            </a>
+            {" | "}
+            <a
+              href="https://aglflorida.com/contact"
+              className="text-blue-600 hover:text-blue-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Us
+            </a>
           </div>
         </footer>
       </body>
