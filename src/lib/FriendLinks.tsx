@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FriendLinks() {
   return (
     <div className="flex space-x-4">
@@ -7,9 +9,11 @@ export default function FriendLinks() {
         rel="noopener noreferrer"
         className="flex items-center space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
-        <img
+        <Image
           src="/assets/lindsay.png"
           alt="Lindsay Dare Shoop, OLY logo"
+          height={69}
+          width={69}
           className="h-full w-auto max-h-full"
         />
         <span>Lindsay Dare Shoop, OLY</span>
@@ -21,9 +25,11 @@ export default function FriendLinks() {
         rel="noopener noreferrer"
         className="space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
-        <img
+        <Image
           src="/assets/kuzaa.png"
           alt="Kuzaa logo"
+          height={69}
+          width={123}
           className="h-full w-auto max-h-full"
         />
       </a>
@@ -34,9 +40,11 @@ export default function FriendLinks() {
         rel="noopener noreferrer"
         className="flex items-center space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
-        <img
+        <Image
           src="/assets/novacove.png"
           alt="Novacove.ai logo"
+          height={55}
+          width={59}
           className="h-full w-auto max-h-full"
         />
         <span>Novacove.ai</span>
