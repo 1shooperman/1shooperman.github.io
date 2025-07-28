@@ -1,7 +1,7 @@
 ---
 title: "iOS Project: RecallKit"
 date: "2025-07-27"
-description: "N-Back: A Memory Game"
+description: "The first thing I ever put on a store - without a team."
 technologies:
   - "Swift"
   - "SwiftUI"
