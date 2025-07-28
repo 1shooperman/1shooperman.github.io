@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSortedPosts } from "@/lib/getPosts";
 import { getSortedProjects } from "@/lib/getProjects";
+import FriendLinks from "@/lib/FriendLinks";
 
 export default async function Home() {
   const posts = getSortedPosts();
@@ -51,10 +52,22 @@ export default async function Home() {
               </div>
             ))}
             <hr />
-            <Link href="/projects/" className="text-blue-600 hover:text-blue-800">
-              More...
-            </Link>
+            <a
+              href="https://aglflorida.com/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800"
+            >
+                More...
+            </a>
           </div>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow">
+          <h2 className="text-2xl font-bold mb-4">Friends</h2>
+          <p className="mb-4">
+            Check out this great group of humans!
+          </p>
+          <FriendLinks />
         </div>
       </div>
 
