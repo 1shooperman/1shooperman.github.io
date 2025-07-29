@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function FriendLinks() {
   return (
-    <div className="flex space-x-4">
+    <div className="flex gap-2">
       <a
         href="https://www.lindsaydareshoop.com/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
+        className="flex items-center p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
         <Image
           src="/assets/lindsay.png"
@@ -16,14 +16,14 @@ export default function FriendLinks() {
           width={69}
           className="h-full w-auto max-h-full"
         />
-        <span>Lindsay Dare Shoop, OLY</span>
+        <span className="ml-2 force-hide-sm">Lindsay Dare Shoop, OLY</span>
       </a>
 
       <a
         href="https://wearekuzaa.com/"
         target="_blank"
         rel="noopener noreferrer"
-        className="space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
+        className="flex items-center justify-center p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
         <Image
           src="/assets/kuzaa.png"
@@ -38,7 +38,7 @@ export default function FriendLinks() {
         href="https://inocula.novacove.ai/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
+        className="flex items-center p-2 bg-gray-100 rounded hover:bg-gray-200 text-gray-800 hover:text-gray-900 h-[69px]"
       >
         <Image
           src="/assets/novacove.png"
@@ -47,7 +47,7 @@ export default function FriendLinks() {
           width={59}
           className="h-full w-auto max-h-full"
         />
-        <span>Novacove.ai</span>
+        <span className="ml-2 force-hide-sm">Novacove.ai</span>
       </a>
     </div>
   );
