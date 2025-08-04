@@ -64,6 +64,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 <i className="fab fa-github"></i>
               </a>
+              <a
+                href="https://aglflorida.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-gray-100 hover:text-gray-300"
+              >
+                <i className="fa fa-briefcase"></i>
+              </a>
               <div className="relative group">
                 <button
                   className="text-2xl text-gray-100 hover:text-gray-300 p-2"
