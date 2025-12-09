@@ -72,8 +72,8 @@ async function main() {
 
   // Validate Person schema
   console.log('Validating Person schema...');
-  const personSchema = generatePersonSchema(baseUrl);
-  validateSchema(personSchema, validatePerson, 'Person', 'Root Person');
+  const personSchemaData = generatePersonSchema(baseUrl);
+  validateSchema(personSchemaData, validatePerson, 'Person', 'Root Person');
 
   // Validate WebSite schema
   console.log('Validating WebSite schema...');
