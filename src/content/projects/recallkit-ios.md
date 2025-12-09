@@ -12,6 +12,8 @@ links:
   #   url: "https://play.google.com/store/TBD"
   # - text: "Github"
   #   url: "https://github.com/AGLFlorida/n-back"
+applicationCategory: "MobileApplication"
+operatingSystem: "iOS"  
 ---
 
 Check out the press release! [https://aglflorida.com/blog/recall-kit-v1](https://aglflorida.com/blog/recall-kit-v1)

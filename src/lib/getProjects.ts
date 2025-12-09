@@ -18,6 +18,8 @@ export type Project = {
     text: string;
     url: string;
   }>;
+  applicationCategory?: string;
+  operatingSystem?: string;
 };
 
 export async function getSortedProjects(): Promise<Project[]> {

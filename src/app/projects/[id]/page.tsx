@@ -38,8 +38,8 @@ export default async function ProjectPage({ params }: { params: Params }) {
     project.title,
     project.description,
     url,
-    'MobileApplication',
-    'iOS, Android'
+    project.applicationCategory || 'MobileApplication',
+    project.operatingSystem || 'iOS, Android'
   );
   const breadcrumbSchema = generateBreadcrumbSchemaForPath(`/projects/${id}`);
 

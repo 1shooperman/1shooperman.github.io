@@ -120,8 +120,8 @@ async function main() {
       project.title,
       project.description,
       url,
-      'MobileApplication',
-      'iOS, Android'
+      project.applicationCategory || 'MobileApplication',
+      project.operatingSystem || 'iOS, Android'
     );
     validateSchema(
       projectSchema,
