@@ -1,5 +1,8 @@
 import { getProjectById, getSortedProjects } from "@/lib/getProjects";
 import { metadataFactory } from "@/lib/metadata";
+import { generateProjectSchema } from "@/lib/schema";
+import { generateBreadcrumbSchemaForPath } from "@/lib/BreadcrumbSchema";
+import type { ResolvingMetadata } from 'next';
 
 type Params = Promise<{ id: string }>;
 
@@ -8,10 +11,18 @@ export async function generateStaticParams() {
   return projects.map((project) => ({ id: project.id }));
 }
 
-export const generateMetadata = metadataFactory(
-  "Projects",
-  ""
-);
+export async function generateMetadata({ params }: { params: Params }) {
+  const { id } = await params;
+  const project = await getProjectById(id);
+
+  if (!project) {
+    return metadataFactory("Projects", "Project Not Found")({ params: Promise.resolve({ id }) }, {} as ResolvingMetadata);
+  }
+
+  return metadataFactory("Projects", project.title, {
+    description: project.description,
+  })({ params: Promise.resolve({ id }) }, {} as ResolvingMetadata);
+}
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
@@ -21,8 +32,27 @@ export default async function ProjectPage({ params }: { params: Params }) {
     return <div style={{ whiteSpace: 'pre' }}>Project Not Found</div>;
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const url = `${baseUrl}/projects/${id}`;
+  const projectSchema = generateProjectSchema(
+    project.title,
+    project.description,
+    url,
+    project.applicationCategory || 'MobileApplication',
+    project.operatingSystem || 'iOS, Android'
+  );
+  const breadcrumbSchema = generateBreadcrumbSchemaForPath(`/projects/${id}`);
+
   return (
     <div className="max-w-4xl mx-auto py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <h1 className="text-3xl font-bold mb-8">{project.title}</h1>
 
       <div className="bg-white p-6 rounded-lg shadow mb-8">

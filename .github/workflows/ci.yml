@@ -28,6 +28,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Validate schemas
+        run: npm run validate:schemas
+
       - name: Build project
         run: npm run build
 

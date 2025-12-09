@@ -13,7 +13,7 @@ export default async function Home() {
       {/* Main Content Column */}
       <div className="w-full lg:w-2/3 space-y-8">
         <div className="bg-white p-6 rounded-lg shadow">
-          <h2 className="text-2xl font-bold mb-4">Welcome</h2>
+          <h1 className="text-2xl font-bold mb-4">Welcome</h1>
           <p className="mb-4">
             I put this together because I need a place to put my thoughts and centralize content for personal projects.
             This site is built with Next.js, Tailwind, and TypeScript. It&apos;s hosted on Github Pages and was largely built using <Link style={{color: 'blue'}} href="https://www.cursor.com/" target="_blank" >Cursor AI</Link>.

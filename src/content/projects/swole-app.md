@@ -17,6 +17,8 @@ links:
   #   url: "https://apps.apple.com/TBD"
   # - text: "Play Store"
   #   url: "https://play.google.com/store/TBD"
+applicationCategory: "MobileApplication"
+operatingSystem: "iOS, Android"
 ---
 
 ## From Fatherhood to Fitness: Why I’m Building a Workout Tracker for My Son

@@ -1,21 +1,35 @@
-# 1shooperman.github.io
+# brandonshoop.com
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal blog and portfolio site for Brandon Shoop — computer scientist, software generalist, and technical product manager. This site serves as a central place for thoughts, project showcases, and technical writing.
 
-## Project Description
+## About
 
-Welcome to the 1shooperman GitHub Pages site! This project showcases the power of Next.js in building fast and modern web applications. Dive in to explore the features and capabilities of this awesome framework.
+This is a personal blog/portfolio built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and TypeScript. The site is hosted on GitHub Pages and features:
 
-## Features
+- **Blog posts**: Technical writing, career reflections, and thoughts on technology
+- **Project showcases**: Personal projects including mobile apps and development tools
+- **SEO optimization**: Structured data, Open Graph metadata, and semantic HTML
+- **Content management**: Markdown-based content in `src/content/` for easy authoring
 
-- 🚀 **Fast Performance**: Optimized for speed and efficiency.
-- 🎨 **Modern Design**: Sleek and responsive UI.
-- 🔧 **Developer Friendly**: Easy to set up and extend.
-- 🌐 **SEO Optimized**: Built-in support for SEO best practices.
+The site was largely built using [Cursor AI](https://www.cursor.com/), with selective use of GitHub Copilot for rapid iteration.
 
-## Installation
+## Tech Stack
 
-To get started with this project, clone the repository and install the dependencies:
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS with Typography plugin
+- **Content**: Markdown files processed with `gray-matter` and `remark`
+- **Testing**: Jest with React Testing Library
+- **Type Safety**: TypeScript
+- **Deployment**: GitHub Pages
+
+## Development
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm
+
+### Setup
 
 ```bash
 git clone https://github.com/1shooperman/1shooperman.github.io.git
@@ -23,29 +37,28 @@ cd 1shooperman.github.io
 npm install
 ```
 
-## Usage
-
-Run the development server:
+### Running Locally
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Contributing
+### Available Scripts
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm test` - Run Jest tests
+- `npm run validate:schemas` - Validate JSON-LD schema definitions
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
+## Content Structure
+
+- **Blog posts**: `src/content/blog/*.md` - Front matter with title, date, excerpt
+- **Projects**: `src/content/projects/*.md` - Front matter with metadata (technologies, links, etc.)
 
 ## License
 
 This project is licensed under the MIT License.
-
-The copy was generated w/ help from ChatGPT

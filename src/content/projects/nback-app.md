@@ -19,6 +19,8 @@ links:
   #   url: "https://play.google.com/store/TBD"
   # - text: "Github"
   #   url: "https://github.com/AGLFlorida/n-back"
+applicationCategory: "MobileApplication"
+operatingSystem: "iOS, Android"
 ---
 
 ## Restarting with Purpose: Building a Better N-Back Experience
