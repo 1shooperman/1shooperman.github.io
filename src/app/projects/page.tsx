@@ -1,23 +1,35 @@
 import Link from "next/link";
 import { getSortedProjects } from "@/lib/getProjects";
 import { Metadata } from 'next';
+import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/metadata';
+import { generateBreadcrumbSchemaForPath } from "@/lib/BreadcrumbSchema";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const title = 'Projects | Practical Tech with Real-World Impact';
+  const description = 'Projects under development or found interesting. Practical Tech with Real-World Impact.';
 
   return {
-    title: 'Projects | Practical Tech with Real-World Impact',
+    title,
+    description,
     alternates: {
       canonical: `${baseUrl}/projects`,
     },
+    openGraph: generateOpenGraphMetadata(title, description, `${baseUrl}/projects`),
+    twitter: generateTwitterMetadata(title, description),
   };
 }
 
 export default async function ProjectsPage() {
   const projects = await getSortedProjects();
+  const breadcrumbSchema = generateBreadcrumbSchemaForPath('/projects');
 
   return (
     <div className="max-w-4xl mx-auto py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <h1 className="text-3xl font-bold mb-8">Projects</h1>
       <p className="mb-4">
         The projects we have under development or found interesting. Practical Tech with Real-World Impact.

@@ -3,26 +3,35 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { Breadcrumbs } from '@/lib/Breadcrumbs';
+import { generatePersonSchema, generateWebsiteSchema } from '@/lib/schema';
+import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/metadata';
 
 import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const title = 'Brandon Shoop: Blog';
+  const description = 'Personal blog of Brandon Shoop, computer scientist and software generalist. Technical product management, hands-on development, and thoughts on technology.';
 
   return {
-    title: 'Brandon Shoop: Blog',
-    description: 'This is the personal blog of Brandon Shoop, founder AGL consulting.',
+    title,
+    description,
     alternates: {
       canonical: baseUrl,
     },
     icons: {
       icon: '/favicon.png',
     },
+    openGraph: generateOpenGraphMetadata(title, description, baseUrl),
+    twitter: generateTwitterMetadata(title, description),
   };
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const currentYear = new Date().getFullYear();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const personSchema = generatePersonSchema(baseUrl);
+  const websiteSchema = generateWebsiteSchema(baseUrl);
 
   return (
     <html lang="en">
@@ -32,6 +41,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className="bg-gray-100 text-gray-900">
         <header className="bg-gray-900 shadow-sm">
@@ -39,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="flex items-center space-x-3 hover:text-gray-300 transition">
               <Image
                 src="/siteicon.png"
-                alt="Site Icon"
+                alt="Brandon Shoop site icon"
                 width={40}
                 height={40}
                 style={{ width: '40px', height: '40px' }}
