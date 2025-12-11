@@ -115,8 +115,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      aria-label="Projects (opens in new tab)"
                     >
-                      Projects
+                      Projects <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
@@ -140,8 +141,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               className="text-blue-600 hover:text-blue-800"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Security Policy (opens in new tab)"
             >
-              Security Policy
+              Security Policy <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
             </a>
             {" | "}
             <a
@@ -149,8 +151,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               className="text-blue-600 hover:text-blue-800"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contact Us (opens in new tab)"
             >
-              Contact Us
+              Contact Us <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
             </a>
           </div>
         </footer>
