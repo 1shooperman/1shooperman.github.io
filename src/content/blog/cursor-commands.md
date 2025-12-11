@@ -13,7 +13,7 @@ This post is referring to the Cursor AI enabled IDE.
 
 I just started playing with the Cursor commands and let me tell you, this IDE is the real deal. Between rules files, MCP servers, and now commands, this is the coding-buddy-with-guardrails I've always wanted.
 
-`.cursor/commands/review.mdc`
+`.cursor/commands/review.md`
 
 ```
 # review

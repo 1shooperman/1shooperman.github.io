@@ -22,7 +22,14 @@ export default async function Home() {
 
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-bold mb-4">
-            <Link href="/projects/">Projects</Link>
+            <a
+              href="https://aglflorida.com/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projects (opens in new tab)"
+            >
+              Projects <i className="fas fa-external-link-alt text-sm ml-1" aria-hidden="true"></i>
+            </a>
           </h2>
           <div className="space-y-6">
             {featuredProjects.map((project) => (
@@ -57,8 +64,9 @@ export default async function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800"
+              aria-label="More projects (opens in new tab)"
             >
-                More...
+              More... <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
             </a>
           </div>
         </div>
