@@ -110,12 +110,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     >
                       Posts
                     </Link>
-                    <Link
-                      href="/projects"
+                    <a
+                      href="https://aglflorida.com/projects"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                     >
                       Projects
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>

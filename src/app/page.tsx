@@ -22,7 +22,13 @@ export default async function Home() {
 
         <div className="bg-white p-6 rounded-lg shadow">
           <h2 className="text-2xl font-bold mb-4">
-            <Link href="/projects/">Projects</Link>
+            <a
+              href="https://aglflorida.com/projects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Projects
+            </a>
           </h2>
           <div className="space-y-6">
             {featuredProjects.map((project) => (
