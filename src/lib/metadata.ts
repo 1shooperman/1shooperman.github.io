@@ -79,7 +79,6 @@ export function metadataFactory(
 ) {
   return async function generateMetadata(
     { params }: Params,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _parent: ResolvingMetadata
   ): Promise<Metadata> {
     const resolvedParams = await params;
