@@ -5,6 +5,12 @@ const eslintConfig = [
   ...nextConfig,
   ...nextTypeScript,
   {
+    ignores: [
+      "tailwind.config.js",
+      "jest.config.js"
+    ],
+  },
+  {
     rules: {
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     },

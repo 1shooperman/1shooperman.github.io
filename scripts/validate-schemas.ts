@@ -10,7 +10,6 @@ import {
   generatePersonSchema,
   generateArticleSchema,
   generateProjectSchema,
-  generateBreadcrumbSchema,
   generateWebsiteSchema,
 } from '../src/lib/schema';
 import { generateBreadcrumbSchemaForPath } from '../src/lib/BreadcrumbSchema';
