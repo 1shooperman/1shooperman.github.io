@@ -5,6 +5,24 @@ import {
 } from '../metadata';
 import type { ResolvingMetadata } from 'next';
 
+// Helper types for testing metadata structures
+type OpenGraphTestType = {
+  title?: string;
+  description?: string;
+  url?: string;
+  siteName?: string;
+  locale?: string;
+  type?: 'website' | 'article';
+  images?: Array<{ url: string }> | { url: string } | string | string[];
+};
+
+type TwitterTestType = {
+  card?: string;
+  title?: string;
+  description?: string;
+  images?: string | string[];
+};
+
 describe('metadata', () => {
   const mockBaseUrl = 'https://brandonshoop.com';
   const mockParent: ResolvingMetadata = {} as ResolvingMetadata;
@@ -19,7 +37,7 @@ describe('metadata', () => {
       const description = 'Test Description';
       const url = `${mockBaseUrl}/test`;
 
-      const og = generateOpenGraphMetadata(title, description, url);
+      const og = generateOpenGraphMetadata(title, description, url) as OpenGraphTestType;
 
       expect(og?.title).toBe(title);
       expect(og?.description).toBe(description);
@@ -28,17 +46,23 @@ describe('metadata', () => {
       expect(og?.locale).toBe('en_US');
       expect(og?.type).toBe('website');
       expect(og?.images).toBeDefined();
-      expect(og?.images?.[0]?.url).toBe(`${mockBaseUrl}/siteicon.png`);
+      const images = Array.isArray(og?.images) ? og.images : [og?.images];
+      const firstImage = images[0];
+      const imageUrl = typeof firstImage === 'string' ? firstImage : firstImage?.url;
+      expect(imageUrl).toBe(`${mockBaseUrl}/siteicon.png`);
     });
 
     it('should use provided image URL', () => {
       const customImage = `${mockBaseUrl}/custom-image.png`;
-      const og = generateOpenGraphMetadata('Title', 'Desc', `${mockBaseUrl}/test`, customImage);
-      expect(og?.images?.[0]?.url).toBe(customImage);
+      const og = generateOpenGraphMetadata('Title', 'Desc', `${mockBaseUrl}/test`, customImage) as OpenGraphTestType;
+      const images = Array.isArray(og?.images) ? og.images : [og?.images];
+      const firstImage = images[0];
+      const imageUrl = typeof firstImage === 'string' ? firstImage : firstImage?.url;
+      expect(imageUrl).toBe(customImage);
     });
 
     it('should support article type', () => {
-      const og = generateOpenGraphMetadata('Title', 'Desc', `${mockBaseUrl}/test`, undefined, 'article');
+      const og = generateOpenGraphMetadata('Title', 'Desc', `${mockBaseUrl}/test`, undefined, 'article') as OpenGraphTestType;
       expect(og?.type).toBe('article');
     });
 
@@ -46,8 +70,11 @@ describe('metadata', () => {
       const originalEnv = process.env.NEXT_PUBLIC_BASE_URL;
       delete process.env.NEXT_PUBLIC_BASE_URL;
 
-      const og = generateOpenGraphMetadata('Title', 'Desc', 'https://test.com/page');
-      expect(og?.images?.[0]?.url).toBe('https://brandonshoop.com/siteicon.png');
+      const og = generateOpenGraphMetadata('Title', 'Desc', 'https://test.com/page') as OpenGraphTestType;
+      const images = Array.isArray(og?.images) ? og.images : [og?.images];
+      const firstImage = images[0];
+      const imageUrl = typeof firstImage === 'string' ? firstImage : firstImage?.url;
+      expect(imageUrl).toBe('https://brandonshoop.com/siteicon.png');
 
       process.env.NEXT_PUBLIC_BASE_URL = originalEnv;
     });
@@ -58,27 +85,30 @@ describe('metadata', () => {
       const title = 'Test Title';
       const description = 'Test Description';
 
-      const twitter = generateTwitterMetadata(title, description);
+      const twitter = generateTwitterMetadata(title, description) as TwitterTestType;
 
       expect(twitter?.card).toBe('summary_large_image');
       expect(twitter?.title).toBe(title);
       expect(twitter?.description).toBe(description);
       expect(twitter?.images).toBeDefined();
-      expect(twitter?.images?.[0]).toBe(`${mockBaseUrl}/siteicon.png`);
+      const images = Array.isArray(twitter?.images) ? twitter.images : [twitter?.images];
+      expect(images[0]).toBe(`${mockBaseUrl}/siteicon.png`);
     });
 
     it('should use provided image URL', () => {
       const customImage = `${mockBaseUrl}/custom-image.png`;
-      const twitter = generateTwitterMetadata('Title', 'Desc', customImage);
-      expect(twitter?.images?.[0]).toBe(customImage);
+      const twitter = generateTwitterMetadata('Title', 'Desc', customImage) as TwitterTestType;
+      const images = Array.isArray(twitter?.images) ? twitter.images : [twitter?.images];
+      expect(images[0]).toBe(customImage);
     });
 
     it('should fallback to default baseUrl if env var not set', () => {
       const originalEnv = process.env.NEXT_PUBLIC_BASE_URL;
       delete process.env.NEXT_PUBLIC_BASE_URL;
 
-      const twitter = generateTwitterMetadata('Title', 'Desc');
-      expect(twitter?.images?.[0]).toBe('https://brandonshoop.com/siteicon.png');
+      const twitter = generateTwitterMetadata('Title', 'Desc') as TwitterTestType;
+      const images = Array.isArray(twitter?.images) ? twitter.images : [twitter?.images];
+      expect(images[0]).toBe('https://brandonshoop.com/siteicon.png');
 
       process.env.NEXT_PUBLIC_BASE_URL = originalEnv;
     });
@@ -154,15 +184,29 @@ describe('metadata', () => {
       const factory = metadataFactory('Blog', 'All Posts', { image: customImage });
       const metadata = await factory({ params: Promise.resolve({}) }, mockParent);
 
-      expect(metadata.openGraph?.images?.[0]?.url).toBe(customImage);
-      expect(metadata.twitter?.images?.[0]).toBe(customImage);
+      const ogImages = Array.isArray(metadata.openGraph?.images) 
+        ? metadata.openGraph.images 
+        : metadata.openGraph?.images 
+          ? [metadata.openGraph.images] 
+          : [];
+      const twitterImages = Array.isArray(metadata.twitter?.images)
+        ? metadata.twitter.images
+        : metadata.twitter?.images
+          ? [metadata.twitter.images]
+          : [];
+      const firstOgImage = ogImages[0];
+      const ogImageUrl = typeof firstOgImage === 'string' 
+        ? firstOgImage 
+        : (firstOgImage as { url?: string })?.url;
+      expect(ogImageUrl).toBe(customImage);
+      expect(twitterImages[0]).toBe(customImage);
     });
 
     it('should support article type', async () => {
       const factory = metadataFactory('Blog', 'All Posts', { type: 'article' });
       const metadata = await factory({ params: Promise.resolve({}) }, mockParent);
 
-      expect(metadata.openGraph?.type).toBe('article');
+      expect((metadata.openGraph as OpenGraphTestType)?.type).toBe('article');
     });
 
     it('should use default description when not provided', async () => {

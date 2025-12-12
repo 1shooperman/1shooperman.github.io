@@ -31,6 +31,9 @@ jobs:
       - name: Validate schemas
         run: npm run validate:schemas
 
+      - name: Compile typescript
+        run: npm run compile
+
       - name: Build project
         run: npm run build
 
