@@ -8,18 +8,18 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "jest",
-    "validate:schemas": "tsx scripts/validate-schemas.ts"
+    "validate:schemas": "tsx scripts/validate-schemas.ts",
+    "compile": "npx tsc --noEmit"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^16.0.10",
+    "next": "16.0.10",
     "react": "19.0.3",
     "react-dom": "19.0.3",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",

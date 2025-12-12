@@ -15,7 +15,7 @@ The site was largely built using [Cursor AI](https://www.cursor.com/), with sele
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS with Typography plugin
 - **Content**: Markdown files processed with `gray-matter` and `remark`
 - **Testing**: Jest with React Testing Library
