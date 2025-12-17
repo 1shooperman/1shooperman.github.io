@@ -15,7 +15,10 @@ The site was largely built using [Cursor AI](https://www.cursor.com/), with sele
 
 ## Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+
+- **Framework**: Next.js (App Router)
 - **Styling**: Tailwind CSS with Typography plugin
 - **Content**: Markdown files processed with `gray-matter` and `remark`
 - **Testing**: Jest with React Testing Library
@@ -61,4 +64,4 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## License
 
-This project is licensed under the MIT License.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
