@@ -89,6 +89,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 <i className="fa fa-briefcase"></i>
               </a>
+              <a
+                href="https://www.goodreads.com/user/show/59372161"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-gray-100 hover:text-gray-300"
+              >
+                <i className="fab fa-goodreads-g"></i>
+              </a>
               <div className="relative group">
                 <button
                   className="text-2xl text-gray-100 hover:text-gray-300 p-2"
