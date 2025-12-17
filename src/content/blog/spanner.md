@@ -1,6 +1,6 @@
 ---
 title: "Whitepapers: Spanner"
-excerpt: A brief summary of your blog post
+excerpt: Google's paper on Spanner
 author: Brandon Shoop
 date: "2025-12-17"
 ---
