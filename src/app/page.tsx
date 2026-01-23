@@ -5,6 +5,7 @@ import FriendLinks from "@/lib/FriendLinks";
 
 export default async function Home() {
   const posts = getSortedPosts();
+  const featuredPosts = posts.slice(0, 5); // Show only first 5 posts
   const projects = await getSortedProjects();
   const featuredProjects = projects.slice(0, 2); // Show only first 2 projects
 
@@ -88,7 +89,7 @@ export default async function Home() {
             </Link>
           </h2>
           <ul className="space-y-3">
-            {posts.map((post) => (
+            {featuredPosts.map((post) => (
               <li key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}`}
