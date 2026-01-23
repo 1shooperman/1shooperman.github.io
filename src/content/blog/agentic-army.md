@@ -47,6 +47,6 @@ Overall, the setup reduces manual work and catches issues I'd otherwise miss. It
 
 I'd been toying with deeper automation behind both technical and product marketing release notes. That needs more work (because it's flaky) and lives here: https://github.com/AGLFlorida/summarizer
 
-# Relevant context
+### Relevant context
 
 The prompt commands I use can be found here: https://github.com/1shooperman/cursor-template/tree/main/.cursor/commands
