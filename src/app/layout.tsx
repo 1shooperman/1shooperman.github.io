@@ -36,6 +36,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <link rel="apple-touch-icon" href="/siteicon.png" />
+        <meta name="theme-color" content="#111827" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -123,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       className="text-gray-700 hover:text-gray-900 transition"
                       aria-label="Projects (opens in new tab)"
                     >
-                      Porfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
+                      Portfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>

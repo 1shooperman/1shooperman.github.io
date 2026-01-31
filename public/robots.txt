@@ -1,4 +1,18 @@
+# llms.txt: https://brandonshoop.com/llms.txt
+
 User-agent: *
 Allow: /
+
+User-agent: GPTBot
+Disallow: /blog/
+
+User-agent: CCBot
+Disallow: /blog/
+
+User-agent: anthropic-ai
+Disallow: /blog/
+
+User-agent: Claude-Web
+Disallow: /blog/
 
 Sitemap: https://brandonshoop.com/sitemap.xml
