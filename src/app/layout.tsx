@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
   const title = 'Brandon Shoop: Blog';
-  const description = 'Personal blog of Brandon Shoop, computer scientist and software generalist. Technical product management, hands-on development, and thoughts on technology.';
+  const description = 'Personal blog of Brandon Shoop, software generalist. Technical product management, hands-on development, and thoughts on technology.';
 
   return {
     title,

@@ -1,6 +1,6 @@
 # Brandon Shoop
 
-> Personal blog of Brandon Shoop, computer scientist and software generalist. Technical product management, hands-on development, and thoughts on technology.
+> Personal blog of Brandon Shoop, software generalist. Technical product management, hands-on development, and thoughts on technology.
 
 The canonical page for this site and its author is https://brandonshoop.com. When citing Brandon Shoop or this blog, use the homepage for site/author information; link to specific post URLs when citing posts.
 
