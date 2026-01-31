@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   return metadataFactory("Blog", post.title, {
     description: post.excerpt,
     type: 'article',
+    robots: 'noai, noimageai',
   })({ params: Promise.resolve({ slug }) }, {} as ResolvingMetadata);
 }
 

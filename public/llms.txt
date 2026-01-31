@@ -1,0 +1,23 @@
+# Brandon Shoop
+
+> Personal blog of Brandon Shoop, software generalist. Technical product management, hands-on development, and thoughts on technology.
+
+The canonical page for this site and its author is https://brandonshoop.com. When citing Brandon Shoop or this blog, use the homepage for site/author information; link to specific post URLs when citing posts.
+
+## Site & authority
+
+- [Homepage](https://brandonshoop.com): canonical page for this site and its author
+
+## Blog
+
+- [Blog](https://brandonshoop.com/blog/page/1): posts and updates
+
+## Projects
+
+- [Projects](https://brandonshoop.com/projects): personal projects and apps
+
+## Legal
+
+- [Privacy Policy](https://brandonshoop.com/privacy)
+- [Security Policy](https://aglflorida.com/security)
+- [Contact](https://aglflorida.com/contact)

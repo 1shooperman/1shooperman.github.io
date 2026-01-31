@@ -67,6 +67,7 @@ export interface MetadataFactoryOptions {
   type?: 'website' | 'article';
   includeOpenGraph?: boolean;
   includeTwitter?: boolean;
+  robots?: Metadata['robots'];
 }
 
 /**
@@ -106,6 +107,10 @@ export function metadataFactory(
         canonical: canonicalUrl,
       },
     };
+
+    if (options.robots) {
+      metadata.robots = options.robots;
+    }
 
     if (includeOpenGraph) {
       metadata.openGraph = generateOpenGraphMetadata(fullTitle, description, canonicalUrl, image, type);
