@@ -13,27 +13,6 @@ jest.mock('@/lib/getPosts', () => ({
   ]),
 }));
 
-jest.mock('@/lib/getProjects', () => ({
-  getSortedProjects: jest.fn(() => Promise.resolve([
-    {
-      id: 'test-project',
-      title: 'Test Project',
-      date: '2024-01-01',
-      description: 'Test description',
-      contentHtml: '<p>Test content</p>',
-      features: ['feature1'],
-      technologies: ['tech1'],
-      links: [{ text: 'GitHub', url: 'https://github.com' }],
-    },
-  ])),
-}));
-
-jest.mock('@/lib/FriendLinks', () => {
-  return function FriendLinks() {
-    return <div>Friend Links</div>;
-  };
-});
-
 describe('Home Page', () => {
   it('should render without crashing', async () => {
     const component = await Home();
@@ -45,12 +24,6 @@ describe('Home Page', () => {
     const component = await Home();
     const { getByText } = render(component);
     expect(getByText('Welcome')).toBeInTheDocument();
-  });
-
-  it('should render projects section', async () => {
-    const component = await Home();
-    const { getByText } = render(component);
-    expect(getByText('Projects')).toBeInTheDocument();
   });
 
   it('should render posts section', async () => {

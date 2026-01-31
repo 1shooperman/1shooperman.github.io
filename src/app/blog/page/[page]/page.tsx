@@ -33,7 +33,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const breadcrumbSchema = generateBreadcrumbSchemaForPath(`/blog/page/${page}`);
 
   return (
-    <div className="max-w-4xl mx-auto py-8">
+    <div className="max-w-7xl mx-auto py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
