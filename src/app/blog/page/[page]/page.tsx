@@ -33,7 +33,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const breadcrumbSchema = generateBreadcrumbSchemaForPath(`/blog/page/${page}`);
 
   return (
-    <div className="max-w-4xl mx-auto py-8">
+    <div className="max-w-7xl mx-auto py-8">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -63,11 +63,13 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 function PaginationControls({ currentPage, totalPages }: { currentPage: number, totalPages: number }) {
   return (
     <div className="flex justify-between items-center py-4">
-      <div>
-        {currentPage > 1 && (
+      <div className="min-w-[7rem] text-left">
+        {currentPage > 1 ? (
           <Link href={`/blog/page/${currentPage - 1}`} className="text-blue-600 hover:text-blue-800">
             ← Previous
           </Link>
+        ) : (
+          <span className="invisible" aria-hidden="true">← Previous</span>
         )}
       </div>
       <div className="space-x-2">
@@ -83,11 +85,13 @@ function PaginationControls({ currentPage, totalPages }: { currentPage: number, 
           </Link>
         ))}
       </div>
-      <div>
-        {currentPage < totalPages && (
+      <div className="min-w-[7rem] text-right">
+        {currentPage < totalPages ? (
           <Link href={`/blog/page/${currentPage + 1}`} className="text-blue-600 hover:text-blue-800">
             Next →
           </Link>
+        ) : (
+          <span className="invisible" aria-hidden="true">Next →</span>
         )}
       </div>
     </div>

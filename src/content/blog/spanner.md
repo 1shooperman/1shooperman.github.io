@@ -1,5 +1,5 @@
 ---
-title: "Whitepapers: Spanner"
+title: "Research Paper: Spanner"
 excerpt: Google's paper on Spanner
 author: Brandon Shoop
 date: "2025-12-17"

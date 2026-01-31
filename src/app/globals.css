@@ -25,3 +25,10 @@ body {
     display: none !important;
   }
 }
+
+.prose .linkedin-callout,
+.prose .photo-credit {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-style: italic;
+}
