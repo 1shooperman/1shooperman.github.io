@@ -20,16 +20,16 @@ describe('Home Page', () => {
     expect(container).toBeTruthy();
   });
 
-  it('should render welcome section', async () => {
+  it('should render blog section', async () => {
     const component = await Home();
     const { getByText } = render(component);
-    expect(getByText('Welcome')).toBeInTheDocument();
+    expect(getByText('Blog')).toBeInTheDocument();
   });
 
-  it('should render posts section', async () => {
+  it('should render link to full blog listing', async () => {
     const component = await Home();
     const { getByText } = render(component);
-    expect(getByText('Posts')).toBeInTheDocument();
+    expect(getByText('More...')).toBeInTheDocument();
   });
 });
 

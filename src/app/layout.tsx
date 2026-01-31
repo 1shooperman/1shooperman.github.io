@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 style={{ width: '40px', height: '40px' }}
                 className="rounded-full"
               />
-              <span className="text-4xl font-bold text-gray-100">Brandon Shoop</span>
+              <span className="text-4xl font-bold text-gray-100 hidden md:inline">Brandon Shoop</span>
             </Link>
             <div className="flex items-center gap-3">
               <a
@@ -72,7 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
                 aria-label="Portfolio (opens in new tab)"
               >
-                Portfolio
+                <i className="fa fa-briefcase" aria-hidden="true"></i>
+                <span className="hidden md:inline">Portfolio</span>
               </a>
               <a
                 href="https://github.com/1shooperman?tab=repositories"
@@ -82,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 aria-label="GitHub (opens in new tab)"
               >
                 <i className="fab fa-github" aria-hidden="true"></i>
-                GitHub
+                <span className="hidden md:inline">GitHub</span>
               </a>
             </div>
           </div>
@@ -116,22 +117,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       Porfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
                     </a>
                   </li>
-                  <li>
-                    <Link href="/privacy" className="text-gray-700 hover:text-gray-900 transition">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href="https://aglflorida.com/security"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-700 hover:text-gray-900 transition"
-                      aria-label="Security Policy (opens in new tab)"
-                    >
-                      Security Policy <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
-                    </a>
-                  </li>
                 </ul>
               </nav>
             </aside>
@@ -143,39 +128,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <footer className="mt-16 bg-gray-800 text-gray-300">
           <div className="max-w-7xl mx-auto px-4 py-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+              <div className="md:max-w-sm">
                 <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-                  Site
+                  About Brandon
                 </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link href="/" className="hover:text-white transition">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog/page/1" className="hover:text-white transition">
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      href="https://aglflorida.com/projects"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white transition"
-                      aria-label="Projects (opens in new tab)"
-                    >
-                      Portfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
+                <p className="text-sm text-gray-400">
+                  Brandon is a husband, father of two, occasional blogger, and speaker with a long, winding relationship with technology. A self-described generalist, he has spent his career moving between disciplines, roles, and square holes that never quite fit for long. He writes sporadically but honestly about adult ADHD, technology, and what it’s like to build things when your brain works a little sideways.
+                </p>
               </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-                  Legal
-                </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:flex-1 md:justify-end">
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
+                    Site
+                  </h3>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link href="/" className="hover:text-white transition">
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/page/1" className="hover:text-white transition">
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        href="https://aglflorida.com/projects"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition"
+                        aria-label="Projects (opens in new tab)"
+                      >
+                        Portfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
+                    Legal
+                  </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link href="/privacy" className="hover:text-white transition">
@@ -194,11 +188,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </a>
                   </li>
                 </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-                  Connect
-                </h3>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
+                    Connect
+                  </h3>
                 <div className="flex gap-4 mb-4">
                   <a
                     href="https://www.linkedin.com/in/brandonshoop/"
@@ -228,11 +222,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <i className="fab fa-goodreads-g"></i>
                   </a>
                 </div>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
-                  Friends
-                </h3>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-100 uppercase tracking-wider mb-4">
+                    Friends &amp; Family
+                  </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
@@ -254,6 +248,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       aria-label="Kuzaa (opens in new tab)"
                     >
                       Kuzaa
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://universaldesign.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition"
+                      aria-label="The UD Project (opens in new tab)"
+                    >
+                      The UD Project
                     </a>
                   </li>
                   <li>
@@ -290,6 +295,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </a>
                   </li>
                 </ul>
+                </div>
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
