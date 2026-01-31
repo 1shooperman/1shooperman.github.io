@@ -51,40 +51,49 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-gray-100 text-gray-900">
-        <header className="bg-gray-900 shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/" className="flex items-center space-x-3 hover:text-gray-300 transition">
-              <Image
-                src="/siteicon.png"
-                alt="Brandon Shoop site icon"
-                width={40}
-                height={40}
-                style={{ width: '40px', height: '40px' }}
-                className="rounded-full"
-              />
-              <span className="text-4xl font-bold text-gray-100 hidden md:inline">Brandon Shoop</span>
-            </Link>
-            <div className="flex items-center gap-3">
-              <a
-                href="https://aglflorida.com/projects"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
-                aria-label="Portfolio (opens in new tab)"
-              >
-                <i className="fa fa-briefcase" aria-hidden="true"></i>
-                <span className="hidden md:inline">Portfolio</span>
-              </a>
-              <a
-                href="https://github.com/1shooperman?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
-                aria-label="GitHub (opens in new tab)"
-              >
-                <i className="fab fa-github" aria-hidden="true"></i>
-                <span className="hidden md:inline">GitHub</span>
-              </a>
+        <header className="relative h-32 overflow-hidden">
+          <Image
+            src="/assets/map.jpeg"
+            alt=""
+            fill
+            className="object-cover z-0"
+            priority
+          />
+          <div className="absolute inset-0 bg-gray-900/70 z-10">
+            <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
+              <Link href="/" className="flex items-center space-x-3 hover:text-gray-300 transition">
+                <Image
+                  src="/siteicon.png"
+                  alt="Brandon Shoop site icon"
+                  width={40}
+                  height={40}
+                  style={{ width: '40px', height: '40px' }}
+                  className="rounded-full"
+                />
+                <span className="text-4xl font-bold text-gray-100 hidden md:inline">Brandon Shoop</span>
+              </Link>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://aglflorida.com/projects"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
+                  aria-label="Portfolio (opens in new tab)"
+                >
+                  <i className="fa fa-briefcase" aria-hidden="true"></i>
+                  <span className="hidden md:inline">Portfolio</span>
+                </a>
+                <a
+                  href="https://github.com/1shooperman?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
+                  aria-label="GitHub (opens in new tab)"
+                >
+                  <i className="fab fa-github" aria-hidden="true"></i>
+                  <span className="hidden md:inline">GitHub</span>
+                </a>
+              </div>
             </div>
           </div>
         </header>
