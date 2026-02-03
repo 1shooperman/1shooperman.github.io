@@ -1,0 +1,9 @@
+{
+    "mcpServers": {
+      "mcp-articles": {
+        "command": "node",
+        "args": ["/Users/bshoop/workspace/articles/mcp-server/dist/stdio.js"]
+      }
+    }
+  }
+  
