@@ -5,6 +5,10 @@ author: Brandon Shoop
 date: "2026-01-23"
 ---
 
+![Map](/assets/robot-army.png)
+
+<p class="photo-credit">ChatGPT (GPT 4.x) with the prompt: "and now draw a friendly robot army."</p>
+
 # My Robot Army
 
 I've been pushing deeper into automation tooling on a current engagement. It's been useful to see what actually works when you string together a bunch of automated helpers. Not everything is perfect, as some tools require more babysitting than others, but the overall setup has been productive.
