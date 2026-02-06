@@ -5,6 +5,10 @@ author: Brandon Shoop
 date: "2026-02-06"
 ---
 
+![AI Release Notes](/assets/ai-release-notes.png)
+
+<p class="photo-credit">ChatGPT (GPT 4.x) with the prompt: "go check out this post and draw me a picture"</p>
+
 # AI Release Notes
 
 I tried several hosted models (GPT, Gemini, Mixtral-8x7B-Instruct and Phi-3 Mini via Hugging Face, and Cursor's Composer) for turning code changes into release notes. Free-tier limits and changing model behavior made those options unreliable, so I moved the workflow into Cursor as a custom command. It works against any existing git repo and is adaptable for most agents.
