@@ -1,9 +1,12 @@
 {
-    "mcpServers": {
-      "mcp-articles": {
-        "command": "node",
-        "args": ["/Users/bshoop/workspace/articles/mcp-server/dist/stdio.js"]
+  "mcpServers": {
+    "mcp-articles": {
+      "command": "node",
+      "args": ["/Users/bshoop/workspace/articles/mcp-server/dist/stdio.js"],
+      "env": {
+        "ARTICLES_REPO_ROOT": "/Users/bshoop/workspace/articles",
+        "ARTICLES_COPY_TO": "/Users/bshoop/workspace/1shooperman.github.io/src/content/blog"
       }
     }
   }
-  
+}
