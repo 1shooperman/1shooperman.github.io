@@ -27,7 +27,7 @@ export function getSortedPosts(): BlogPost[] {
       slug: fileName.replace(/\.md$/, ""),
       title: data.title as string,
       date: data.date as string,
-      excerpt: data.excerpt as string,
+      excerpt: (data.excerpt ?? "") as string,
     };
   });
 
@@ -47,7 +47,7 @@ export async function getPostBySlug(slug: string) {
     slug,
     title: data.title as string,
     date: data.date as string,
-    excerpt: data.excerpt as string,
+    excerpt: (data.excerpt ?? "") as string,
     contentHtml,
   };
 }

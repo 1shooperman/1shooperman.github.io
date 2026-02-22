@@ -131,14 +131,6 @@ describe('metadata', () => {
       expect(metadata.alternates?.canonical).toBe(`${mockBaseUrl}/blog/test-article`);
     });
 
-    it('should handle id parameter', async () => {
-      const factory = metadataFactory('Projects', '');
-      const metadata = await factory({ params: Promise.resolve({ id: 'my-project' }) }, mockParent);
-
-      expect(metadata.title).toBe('Projects: My Project');
-      expect(metadata.alternates?.canonical).toBe(`${mockBaseUrl}/projects/my-project`);
-    });
-
     it('should include description when provided', async () => {
       const factory = metadataFactory('Blog', 'All Posts', { description: 'Custom description' });
       const metadata = await factory({ params: Promise.resolve({}) }, mockParent);

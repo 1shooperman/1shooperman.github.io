@@ -9,16 +9,13 @@ import addFormats from 'ajv-formats';
 import {
   generatePersonSchema,
   generateArticleSchema,
-  generateProjectSchema,
   generateWebsiteSchema,
 } from '../src/lib/schema';
 import { generateBreadcrumbSchemaForPath } from '../src/lib/BreadcrumbSchema';
 import { getSortedPosts } from '../src/lib/getPosts';
-import { getSortedProjects } from '../src/lib/getProjects';
 import {
   personSchema,
   blogPostingSchema,
-  softwareApplicationSchema,
   breadcrumbListSchema,
   webSiteSchema,
 } from '../src/lib/schema-definitions';
@@ -38,7 +35,6 @@ addFormats(ajv);
 // Compile schemas
 const validatePerson = ajv.compile(personSchema);
 const validateBlogPosting = ajv.compile(blogPostingSchema);
-const validateSoftwareApplication = ajv.compile(softwareApplicationSchema);
 const validateBreadcrumbList = ajv.compile(breadcrumbListSchema);
 const validateWebSite = ajv.compile(webSiteSchema);
 
@@ -110,39 +106,9 @@ async function main() {
   }
   console.log(`  Validated ${posts.length} blog posts`);
 
-  // Validate all project schemas
-  console.log('Validating project schemas...');
-  const projects = await getSortedProjects();
-  for (const project of projects) {
-    const url = `${baseUrl}/projects/${project.id}`;
-    const projectSchema = generateProjectSchema(
-      project.title,
-      project.description,
-      url,
-      project.applicationCategory || 'MobileApplication',
-      project.operatingSystem || 'iOS, Android'
-    );
-    validateSchema(
-      projectSchema,
-      validateSoftwareApplication,
-      'SoftwareApplication',
-      `Project: ${project.id}`
-    );
-
-    // Validate breadcrumb schema for project
-    const breadcrumbSchema = generateBreadcrumbSchemaForPath(`/projects/${project.id}`);
-    validateSchema(
-      breadcrumbSchema,
-      validateBreadcrumbList,
-      'BreadcrumbList',
-      `Project breadcrumb: ${project.id}`
-    );
-  }
-  console.log(`  Validated ${projects.length} projects`);
-
   // Validate additional breadcrumb paths
   console.log('Validating additional breadcrumb schemas...');
-  const additionalPaths = ['/blog', '/projects', '/privacy'];
+  const additionalPaths = ['/blog', '/privacy'];
   for (const path of additionalPaths) {
     const breadcrumbSchema = generateBreadcrumbSchemaForPath(path);
     validateSchema(

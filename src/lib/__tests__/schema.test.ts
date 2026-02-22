@@ -1,7 +1,6 @@
 import {
   generatePersonSchema,
   generateArticleSchema,
-  generateProjectSchema,
   generateBreadcrumbSchema,
   generateWebsiteSchema,
 } from '../schema';
@@ -92,43 +91,6 @@ describe('schema', () => {
       expect(schema.publisher.logo?.url).toContain('https://test.com');
       
       process.env.NEXT_PUBLIC_BASE_URL = originalEnv;
-    });
-  });
-
-  describe('generateProjectSchema', () => {
-    const testTitle = 'Test Project';
-    const testDescription = 'This is a test project description';
-    const testUrl = `${mockBaseUrl}/projects/test-project`;
-
-    it('should generate a valid SoftwareApplication schema with all required fields', () => {
-      const schema = generateProjectSchema(testTitle, testDescription, testUrl);
-
-      expect(schema['@context']).toBe('https://schema.org');
-      expect(schema['@type']).toBe('SoftwareApplication');
-      expect(schema.name).toBe(testTitle);
-      expect(schema.description).toBe(testDescription);
-      expect(schema.author['@type']).toBe('Person');
-      expect(schema.author.name).toBe('Brandon Shoop');
-      expect(schema.offers).toBeDefined();
-      expect(schema.offers?.['@type']).toBe('Offer');
-      expect(schema.offers?.price).toBe('0');
-      expect(schema.offers?.priceCurrency).toBe('USD');
-    });
-
-    it('should include optional applicationCategory when provided', () => {
-      const schema = generateProjectSchema(testTitle, testDescription, testUrl, 'MobileApplication');
-      expect(schema.applicationCategory).toBe('MobileApplication');
-    });
-
-    it('should include optional operatingSystem when provided', () => {
-      const schema = generateProjectSchema(testTitle, testDescription, testUrl, undefined, 'iOS, Android');
-      expect(schema.operatingSystem).toBe('iOS, Android');
-    });
-
-    it('should handle missing optional fields', () => {
-      const schema = generateProjectSchema(testTitle, testDescription, testUrl);
-      expect(schema.applicationCategory).toBeUndefined();
-      expect(schema.operatingSystem).toBeUndefined();
     });
   });
 
