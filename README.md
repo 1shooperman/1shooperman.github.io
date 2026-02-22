@@ -1,13 +1,12 @@
 # brandonshoop.com
 
-Personal blog and portfolio site for Brandon Shoop — computer scientist, software generalist, and technical product manager. This site serves as a central place for thoughts, project showcases, and technical writing.
+Personal blog and portfolio site for Brandon Shoop — computer scientist, software generalist, and technical product manager. This site serves as a central place for thoughts and technical writing.
 
 ## About
 
 This is a personal blog/portfolio built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and TypeScript. The site is hosted on GitHub Pages and features:
 
 - **Blog posts**: Technical writing, career reflections, and thoughts on technology
-- **Project showcases**: Personal projects including mobile apps and development tools
 - **SEO optimization**: Structured data, Open Graph metadata, and semantic HTML
 - **Content management**: Markdown-based content in `src/content/` for easy authoring
 
@@ -60,7 +59,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 ## Content Structure
 
 - **Blog posts**: `src/content/blog/*.md` - Front matter with title, date, excerpt
-- **Projects**: `src/content/projects/*.md` - Front matter with metadata (technologies, links, etc.)
 
 ## License
 

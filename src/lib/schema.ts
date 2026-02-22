@@ -44,24 +44,6 @@ export interface ArticleSchema {
   };
 }
 
-export interface ProjectSchema {
-  '@context': string;
-  '@type': 'SoftwareApplication';
-  name: string;
-  description: string;
-  applicationCategory?: string;
-  operatingSystem?: string;
-  offers?: {
-    '@type': 'Offer';
-    price: string;
-    priceCurrency: string;
-  };
-  author: {
-    '@type': 'Person';
-    name: string;
-  };
-}
-
 export interface BreadcrumbItem {
   name: string;
   url: string;
@@ -153,43 +135,6 @@ export function generateArticleSchema(
       '@id': url,
     },
   };
-}
-
-/**
- * Generate SoftwareApplication schema for projects
- */
-export function generateProjectSchema(
-  title: string,
-  description: string,
-  url: string,
-  applicationCategory?: string,
-  operatingSystem?: string
-): ProjectSchema {
-  const schema: ProjectSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: title,
-    description,
-    author: {
-      '@type': 'Person',
-      name: 'Brandon Shoop',
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-    },
-  };
-
-  if (applicationCategory) {
-    schema.applicationCategory = applicationCategory;
-  }
-
-  if (operatingSystem) {
-    schema.operatingSystem = operatingSystem;
-  }
-
-  return schema;
 }
 
 /**
