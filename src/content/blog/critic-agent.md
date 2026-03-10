@@ -8,8 +8,6 @@ excerpt: >-
 author: Brandon Shoop
 ---
 
-# Critic: an LLM devil's advocate over HTTP and MCP
-
 Critic is an HTTP and MCP (Model Context Protocol) server that runs LLM prompt chains sequentially. Each step's output is fed as context into the next. The result is multi-stage critical analysis of a claim or plan--either from a single named prompt set or from an ordered pipeline of several sets with outputs wired between stages. It's built to run in Docker. The repo is [1shooperman/critic](https://github.com/1shooperman/critic).
 
 ## How it runs
