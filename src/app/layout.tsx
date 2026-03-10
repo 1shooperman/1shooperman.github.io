@@ -305,6 +305,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       Brandi.ai
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="https://www.congruentchange.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition"
+                      aria-label="Congruent Change (opens in new tab)"
+                    >
+                      Congruent Change
+                    </a>
+                  </li>
                 </ul>
                 </div>
               </div>
