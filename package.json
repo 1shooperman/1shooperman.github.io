@@ -7,15 +7,15 @@
     "build": "next build",
     "start": "npx serve@latest out",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest --no-watchman",
     "validate:schemas": "tsx scripts/validate-schemas.ts",
     "compile": "npx tsc --noEmit"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "16.2.3",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
@@ -38,5 +38,8 @@
     "tailwindcss": "^3.4.1",
     "tsx": "^4.7.0",
     "typescript": "^6"
+  },
+  "overrides": {
+    "glob": "^13.0.6"
   }
 }
