@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span className="hidden md:inline">Portfolio</span>
                 </a>
                 <a
-                  href="https://github.com/1shooperman?tab=repositories"
+                  href="https://github.com/1shooperman"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
