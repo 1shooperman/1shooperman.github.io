@@ -103,8 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main className="max-w-7xl mx-auto p-4">
           <div className="flex flex-col lg:flex-row gap-8">
-            <aside className="w-full lg:w-64 shrink-0 order-2 lg:order-1" aria-label="Site navigation">
-              <nav className="bg-white p-6 rounded-lg shadow sticky top-4">
+            <aside className="w-full lg:w-64 shrink-0 order-2 lg:order-1 lg:sticky lg:top-4 lg:self-start" aria-label="Site navigation">
+              <nav className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
                   Navigate
                 </h2>
