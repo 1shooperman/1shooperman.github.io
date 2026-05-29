@@ -7,7 +7,8 @@ const eslintConfig = [
   {
     ignores: [
       "tailwind.config.js",
-      "jest.config.js"
+      "jest.config.js",
+      "scripts/patch-eslint-react.js"
     ],
   },
   {
