@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "test": "jest --no-watchman",
     "validate:schemas": "tsx scripts/validate-schemas.ts",
-    "compile": "npx tsc --noEmit"
+    "compile": "npx tsc --noEmit",
+    "postinstall": "node scripts/patch-eslint-react.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -30,7 +31,7 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "baseline-browser-mapping": "^2.10.17",
-    "eslint": "^9",
+    "eslint": "^10",
     "eslint-config-next": "^16.2.6",
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
