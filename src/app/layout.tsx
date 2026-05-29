@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Breadcrumbs } from '@/lib/Breadcrumbs';
 import { generatePersonSchema, generateWebsiteSchema } from '@/lib/schema';
 import { generateOpenGraphMetadata, generateTwitterMetadata } from '@/lib/metadata';
+import { getSortedPosts } from '@/lib/getPosts';
 
 import type { Metadata } from 'next';
 
@@ -30,6 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const currentYear = new Date().getFullYear();
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const recentPosts = getSortedPosts().slice(0, 5);
   const personSchema = generatePersonSchema(baseUrl);
   const websiteSchema = generateWebsiteSchema(baseUrl);
 
@@ -130,6 +132,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </li>
                 </ul>
               </nav>
+              <div className="bg-white p-6 rounded-lg shadow mt-4">
+                <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                  <Link href="/blog/page/1" className="hover:text-gray-700 transition">
+                    Recent Posts
+                  </Link>
+                </h2>
+                <ul className="space-y-3">
+                  {recentPosts.map((post) => (
+                    <li key={post.slug}>
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="block hover:bg-gray-50 p-1 -mx-1 rounded transition"
+                      >
+                        <span className="text-sm font-medium text-blue-600 hover:text-blue-800 leading-snug block">
+                          {post.title}
+                        </span>
+                        <span className="text-xs text-gray-400">{post.date}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <hr className="my-3" />
+                <Link href="/blog/page/1" className="text-sm text-blue-600 hover:text-blue-800">
+                  More&hellip;
+                </Link>
+              </div>
             </aside>
             <div className="flex-1 min-w-0 order-1 lg:order-2">
               <Breadcrumbs />
