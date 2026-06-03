@@ -78,14 +78,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://aglflorida.com/projects"
+                  href="https://aglflorida.com/products"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-900 font-medium rounded-md hover:bg-gray-200 transition"
-                  aria-label="Portfolio (opens in new tab)"
+                  aria-label="Services (opens in new tab)"
                 >
                   <i className="fa fa-briefcase" aria-hidden="true"></i>
-                  <span className="hidden md:inline">Portfolio</span>
+                  <span className="hidden md:inline">Services</span>
                 </a>
                 <a
                   href="https://github.com/1shooperman"
@@ -121,13 +121,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </li>
                   <li>
                     <a
-                      href="https://aglflorida.com/projects"
+                      href="https://aglflorida.com/products"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:text-gray-900 transition"
                       aria-label="Projects (opens in new tab)"
                     >
-                      Portfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
+                      Services <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>
@@ -194,13 +194,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </li>
                     <li>
                       <a
-                        href="https://aglflorida.com/projects"
+                        href="https://aglflorida.com/products"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition"
-                        aria-label="Projects (opens in new tab)"
+                        aria-label="Products and Services (opens in new tab)"
                       >
-                        Portfolio <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
+                        Services <i className="fas fa-external-link-alt text-xs ml-1" aria-hidden="true"></i>
                       </a>
                     </li>
                   </ul>

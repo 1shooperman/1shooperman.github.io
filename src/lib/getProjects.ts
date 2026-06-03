@@ -11,11 +11,12 @@ export type Project = {
   github: string;
   technologies?: string[];
   status?: 'active' | 'archived';
+  order?: number;
 };
 
 export function getSortedProjects(): Project[] {
   const fileNames = fs.readdirSync(projectsDirectory);
-  return fileNames
+  const projects = fileNames
     .filter((f) => f.endsWith('.md'))
     .map((fileName) => {
       const id = fileName.replace(/\.md$/, '');
@@ -23,4 +24,13 @@ export function getSortedProjects(): Project[] {
       const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
       return { id, ...(data as Omit<Project, 'id'>) };
     });
+
+  const ordered = projects
+    .filter((p) => p.order != null)
+    .sort((a, b) => a.order! - b.order!);
+  const unordered = projects
+    .filter((p) => p.order == null)
+    .sort((a, b) => a.title.localeCompare(b.title));
+
+  return [...ordered, ...unordered];
 }
