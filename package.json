@@ -31,7 +31,7 @@
     "@types/react-dom": "^19",
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
-    "baseline-browser-mapping": "^2.10.36",
+    "baseline-browser-mapping": "^2.10.38",
     "eslint": "^10",
     "eslint-config-next": "^16.2.6",
     "jest": "^30.3.0",
