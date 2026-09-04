@@ -39,7 +39,7 @@
     "postcss": "^8",
     "tailwindcss": "^4.3.0",
     "tsx": "^4.7.0",
-    "typescript": "^6"
+    "typescript": "^7"
   },
   "overrides": {
     "glob": "^13.0.6"
