@@ -34,7 +34,7 @@
     "baseline-browser-mapping": "^2.11.19",
     "eslint": "^10",
     "eslint-config-next": "^16.2.6",
-    "jest": "^30.3.0",
+    "jest": "^30.5.1",
     "jest-environment-jsdom": "^30.5.1",
     "postcss": "^8",
     "tailwindcss": "^4.3.0",
