@@ -8,6 +8,7 @@ npm test             # Jest (no watch)
 npm test -- <path>   # single test file
 npm run validate:schemas  # validate JSON-LD schema definitions
 npm run compile      # tsc type-check only
+npm run dupes         # jscpd copy-paste detection (fails above 2% duplication)
 ```
 
 ## Architecture

@@ -28,6 +28,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Check for duplicate code
+        run: npm run dupes
+
       - name: Validate schemas
         run: npm run validate:schemas
 
