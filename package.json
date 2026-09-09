@@ -10,6 +10,7 @@
     "test": "jest --no-watchman",
     "validate:schemas": "tsx scripts/validate-schemas.ts",
     "compile": "npx tsc --noEmit",
+    "dupes": "jscpd .",
     "postinstall": "node scripts/patch-eslint-react.js"
   },
   "dependencies": {
@@ -34,8 +35,11 @@
     "baseline-browser-mapping": "^2.11.19",
     "eslint": "^10",
     "eslint-config-next": "^16.2.6",
+    "eslint-plugin-no-unsanitized": "^4.1.5",
+    "eslint-plugin-security": "^4.0.1",
     "jest": "^30.5.1",
     "jest-environment-jsdom": "^30.5.1",
+    "jscpd": "^5.2.0",
     "postcss": "^8",
     "tailwindcss": "^4.3.0",
     "tsx": "^4.7.0",

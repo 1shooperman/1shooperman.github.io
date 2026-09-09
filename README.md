@@ -55,6 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - `npm run lint` - Run ESLint
 - `npm test` - Run Jest tests
 - `npm run validate:schemas` - Validate JSON-LD schema definitions
+- `npm run dupes` - Check for duplicate code with jscpd
 
 ## Content Structure
 

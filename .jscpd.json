@@ -1,0 +1,14 @@
+{
+  "threshold": 2,
+  "reporters": ["console"],
+  "ignore": [
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "public/**",
+    "src/content/**",
+    "coverage/**",
+    "package-lock.json"
+  ],
+  "absolute": true
+}
