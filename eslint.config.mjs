@@ -24,7 +24,7 @@ const eslintConfig = [
     // Build-time content loaders read from a fixed, repo-local directory
     // (no untrusted input reaches these paths on a statically-exported site),
     // and array-index access here is not user-controlled object injection.
-    files: ["src/lib/get*.ts", "**/__tests__/**"],
+    files: ["src/lib/get*.ts", "src/lib/__tests__/**"],
     rules: {
       "security/detect-non-literal-fs-filename": "off",
       "security/detect-object-injection": "off",

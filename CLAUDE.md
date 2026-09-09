@@ -11,12 +11,6 @@ npm run compile      # tsc type-check only
 npm run dupes         # jscpd copy-paste detection (fails above 2% duplication)
 ```
 
-## Security tooling
-
-`eslint-plugin-security` and `eslint-plugin-no-unsanitized` run as part of `npm run lint` (see `eslint.config.mjs`). `security/detect-non-literal-fs-filename` and `security/detect-object-injection` are disabled for `src/lib/get*.ts` and `**/__tests__/**` — those read from a fixed, repo-local content directory at build time on a statically-exported site, so there's no untrusted-input path for them to catch.
-
-`nodejsscan` (njsscan) was evaluated and deliberately not added: it targets Express/Node server vulnerabilities (insecure routes, JWT handling, hardcoded secrets in server code), this site has no server runtime (`output: 'export'`, no API routes), and it would add a Python toolchain to an otherwise Node-only CI pipeline for coverage `eslint-plugin-security` already provides here.
-
 ## Architecture
 
 Static Next.js site (App Router, `output: 'export'`). Deployed to GitHub Pages — no server-side features.
