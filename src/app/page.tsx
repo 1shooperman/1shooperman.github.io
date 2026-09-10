@@ -1,4 +1,23 @@
 import { getSortedProjects } from "@/lib/getProjects";
+import { generateOpenGraphMetadata, generateTwitterMetadata } from "@/lib/metadata";
+
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
+  const title = 'Brandon Shoop: Projects';
+  const description = 'Projects built by Brandon Shoop, software generalist — mobile apps, tools, and experiments.';
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: baseUrl,
+    },
+    openGraph: generateOpenGraphMetadata(title, description, baseUrl),
+    twitter: generateTwitterMetadata(title, description),
+  };
+}
 
 export default function Home() {
   const projects = getSortedProjects();

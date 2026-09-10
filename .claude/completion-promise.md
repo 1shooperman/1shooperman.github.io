@@ -11,6 +11,7 @@
   - npm run compat:check
 </ci-gates>
 - ./specs (i.e. documentation) are up to date
+- Use the agent-seo-peek subagent against the diff and fix any findings before PR
 - Use /code-review when done and add comment to Github PR
 - Action and resolve all code review feedback
 - NEVER MERGE THE PR. Wait for the user to do that.

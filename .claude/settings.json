@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mobile-design-guide__get_guideline",
+      "mcp__mobile-design-guide__list_topics",
+      "mcp__mobile-design-guide__search_guidelines"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "mobile-design-guide"
+  ]
+}

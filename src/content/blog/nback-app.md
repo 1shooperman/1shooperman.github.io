@@ -2,6 +2,7 @@
 title: "Mobile App Project: N-Back"
 date: "2025-03-20"
 description: "N-Back: A Memory Game"
+excerpt: "Why I built an N-Back working memory trainer in React Native, and what ADHD taught me about the gap between existing apps and what I actually needed."
 # features:
   # - "Cross-platform compatibility"
   # - "Real-time synchronization"

@@ -2,6 +2,7 @@
 title: "iOS Project: RecallKit"
 date: "2025-07-27"
 description: "The first thing I ever put on a store - without a team."
+excerpt: "RecallKit, a Swift/SwiftUI study-card app for iOS, is the first thing I've ever shipped to an app store solo."
 technologies:
   - "Swift"
   - "SwiftUI"

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://brandonshoop.com';
 
   return {
     title: 'Privacy Policy | We Respect Your Data and Your Trust',
