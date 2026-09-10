@@ -2,6 +2,7 @@
 title: "Mobile App Project: Fitness Log"
 date: "2025-04-30"
 description: "Codename: SwoleApp"
+excerpt: "Building a React Native workout tracker for my son, and what my own 300lb-to-fit journey taught me about designing for real-life motivation."
 # features:
   # - "Cross-platform compatibility"
   # - "Real-time synchronization"

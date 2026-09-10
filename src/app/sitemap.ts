@@ -20,17 +20,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
+  const POSTS_PER_PAGE = 5;
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+  const blogListPages = Array.from({ length: totalPages }, (_, i) => ({
+    url: `${baseUrl}/blog/page/${i + 1}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: baseUrl,
       changeFrequency: 'weekly',
       priority: 1,
     },
-    {
-      url: `${baseUrl}/blog/page/1`,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
+    ...blogListPages,
     ...blogPosts,
     {
       url: `${baseUrl}/privacy`,
