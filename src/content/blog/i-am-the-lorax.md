@@ -4,7 +4,7 @@ excerpt: why do we keep iterating on one general model that's supposed to do eve
 author: Brandon Shoop
 date: "2026-10-01"
 ---
-# I Am the Lorax 
+
 (and Big AI Keeps Planting Thneed Factories in My Codebase)
 
 Downgrading to Opus/Sonnet 5 was life-changing. Not "new car" life-changing. More like "went back to the doctor who actually reads your chart instead of the one who just vibes with you for twelve minutes" life-changing. It's back to being the Claude I know and love. And every time I sit down to write, it drags the same old question back up with it: why does the industry keep iterating on general superintelligence for its own sake, instead of just making something useful?
