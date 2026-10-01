@@ -2,7 +2,7 @@
 title: I Am the Lorax
 excerpt: why do we keep iterating on one general model that's supposed to do everything
 author: Brandon Shoop
-date: "2026-01-23"
+date: "2026-10-01"
 ---
 # I Am the Lorax 
 (and Big AI Keeps Planting Thneed Factories in My Codebase)
