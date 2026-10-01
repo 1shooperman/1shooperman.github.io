@@ -7,6 +7,8 @@ date: "2026-10-01"
 
 (and Big AI Keeps Planting Thneed Factories in My Codebase)
 
+I was talking to a friend and mentor earlier, complaining (yet again) about the Opus/Sonnet 5.5 models. I wanted to postpone an `AI enabled development` demo because the new models were not behaving. He asked why we couldn't just downgrade to 5. You know when someone asks a question and you are like: "man, I'm pretty dumb because that should have been the obvious answer"?
+
 Downgrading to Opus/Sonnet 5 was life-changing. Not "new car" life-changing. More like "went back to the doctor who actually reads your chart instead of the one who just vibes with you for twelve minutes" life-changing. It's back to being the Claude I know and love. And every time I sit down to write, it drags the same old question back up with it: why does the industry keep iterating on general superintelligence for its own sake, instead of just making something useful?
 
 I've started to feel like the Lorax of software developers. I speak for the trees, or in this case, for the inumerable `CLAUDE.md` files scattered across my repos like little NO TRESPASSING signs that apparently read as suggestions. And Big AI is the Onceler, merrily chopping down scope boundaries because "business is business and business must grow, regardless of crummies in tummies you know." Except my crummy tummy is a production incident.
