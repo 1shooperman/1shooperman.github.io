@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-gray-100 text-gray-900">
         <header className="relative h-32 overflow-hidden">
           <Image
-            src="/assets/map.jpeg"
+            src="/assets/sunrise.png"
             alt=""
             fill
             className="object-cover z-0"
