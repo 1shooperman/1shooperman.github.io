@@ -1,5 +1,7 @@
 # brandonshoop.com
 
+[![CI](https://github.com/1shooperman/1shooperman.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/1shooperman/1shooperman.github.io/actions/workflows/ci.yml)
+
 Personal blog and portfolio site for Brandon Shoop — computer scientist, software generalist, and technical product manager. This site serves as a central place for thoughts and technical writing.
 
 ## About
