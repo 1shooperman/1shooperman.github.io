@@ -76,6 +76,12 @@ Every page/route type that emits its own metadata, checked in full — not diff-
 10. **Current best-practice drift.** Cross-check the above against live guidance pulled
     from the `google-search` platform via MCP — flag anything the site does that
     contradicts current guidance, citing the slug.
+11. ** Thin content risk.** While length itself isn't a rule, pages with extremely low value, empty text, or repetitive "thin content" are often skipped or de-prioritized by Googlebot during crawling and indexing. <General-Industry-Benchmarks>SEO practitioners often recommend loose targets based on context rather than a strict minimum:
+	- Standard blog posts / articles: 1,000–2,500+ words (though shorter posts can work if the topic is narrow).
+	- Product descriptions: 200+ words.
+	- Short product descriptions: 20–50 words.
+	- Taxonomy/category pages: 30+ words of introductory text
+</General-Industry-Benchmarks>
 
 ## Running the audit
 
