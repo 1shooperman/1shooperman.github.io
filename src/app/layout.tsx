@@ -148,7 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <span className="text-sm font-medium text-blue-600 hover:text-blue-800 leading-snug block">
                           {post.title}
                         </span>
-                        <span className="text-xs text-gray-400">{post.date}</span>
+                        <span className="text-xs text-gray-600">{post.date}</span>
                       </Link>
                     </li>
                   ))}
@@ -173,7 +173,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   About Brandon
                 </h3>
                 <p className="text-sm text-gray-400">
-                  Brandon is a husband, father of two, occasional blogger, and speaker with a long, winding relationship with technology. A self-described generalist, he has spent his career moving between disciplines, roles, and square holes that never quite fit for long. He writes sporadically but honestly about adult ADHD, technology, and what it’s like to build things when your brain works a little sideways.
+                  Brandon is a husband, father of two, occasional blogger, and speaker with a long, winding relationship with technology. A self-described generalist, he has spent his career moving between disciplines, roles, and square holes that never quite fit for long. He writes sporadically but honestly about adult ADHD, technology, and what it&apos;s like to build things when your brain works a little sideways.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:flex-1 md:justify-end">
@@ -348,13 +348,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+            <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
               {'\u00A9'} {currentYear}{' '}
               <a
                 href="https://aglflorida.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-gray-400 underline transition"
+                className="text-gray-400 hover:text-gray-300 underline transition"
                 aria-label="AGL Consulting LLC (opens in new tab)"
               >
                 AGL Consulting LLC

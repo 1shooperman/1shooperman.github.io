@@ -8,7 +8,7 @@ While trying to navigate my day to day, I had a moderately disturbing thought: I
 
 Generally, I am pretty bullish on the positive impacts that Artificial General Intelligence will have on society. I do have my reservations, mostly around how our tools teach us to think in terms of that tool. Or, said differently, relying too much on AI to solve our problems reduces our ability to think more broadly than the limited solutions AI can propose.
 
-How can AI engines reward forward-looking content? I feel like this is contrary to their core existing of being trained on _what has come before_. Today's AI systems are trained primarily on historical data. Despite that, they can reward or generate forward-looking content. Why isn’t this a contradiction, and what mechanisms are emerging to improve it?
+How can AI engines reward forward-looking content? I feel like this is contrary to their core existing of being trained on _what has come before_. Today's AI systems are trained primarily on historical data. Despite that, they can reward or generate forward-looking content. Why isn't this a contradiction, and what mechanisms are emerging to improve it?
 
 Models are basically fancy pattern matchers. So, given a historical trend, it can evaluate things like cause and effect. It can see: how markets respond to shocks or how technologies tend to diffuse. This reads to me more like it can extrapolate generalizations rather than reward actual novel content. "Forward looking" actually becomes "forecasting".
 

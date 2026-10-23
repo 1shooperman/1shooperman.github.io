@@ -10,7 +10,10 @@
     "test": "jest --no-watchman",
     "validate:schemas": "tsx scripts/validate-schemas.ts",
     "compile": "npx tsc --noEmit",
-    "dupes": "jscpd ."
+    "dupes": "jscpd .",
+    "test:e2e": "playwright test",
+    "check:unicode": "tsx scripts/check-unicode.ts",
+    "verify:dev": "npm run lint && npm run test && npm run compile && npm run validate:schemas && npm run check:unicode && npm run dupes && npm run test:e2e"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -21,6 +24,8 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^7.0.1",
