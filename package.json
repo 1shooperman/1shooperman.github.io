@@ -10,8 +10,7 @@
     "test": "jest --no-watchman",
     "validate:schemas": "tsx scripts/validate-schemas.ts",
     "compile": "npx tsc --noEmit",
-    "dupes": "jscpd .",
-    "postinstall": "node scripts/patch-eslint-react.js"
+    "dupes": "jscpd ."
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -33,10 +32,10 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "baseline-browser-mapping": "^2.11.25",
-    "eslint": "9.39.5",
+    "eslint": "^10",
     "eslint-config-next": "16.4.2",
     "eslint-plugin-no-unsanitized": "^4.1.5",
-    "eslint-plugin-security": "^4.1.0",
+    "eslint-plugin-security": "^4.2.0",
     "jest": "^30.5.1",
     "jest-environment-jsdom": "^30.5.2",
     "jscpd": "^5.2.0",
@@ -47,8 +46,7 @@
   },
   "overrides": {
     "glob": "^13.0.6",
-    "@types/react": "19.3.0",
-    "@types/react-dom": "19.3.0"
+    "postcss-selector-parser": ">=7.1.6"
   },
   "packageManager": "npm@11.19.1",
   "allowScripts": {
