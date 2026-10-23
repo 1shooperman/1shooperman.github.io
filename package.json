@@ -11,7 +11,9 @@
     "validate:schemas": "tsx scripts/validate-schemas.ts",
     "compile": "npx tsc --noEmit",
     "dupes": "jscpd .",
-    "postinstall": "node scripts/patch-eslint-react.js"
+    "test:e2e": "playwright test",
+    "check:unicode": "tsx scripts/check-unicode.ts",
+    "verify:dev": "npm run lint && npm run test && npm run compile && npm run validate:schemas && npm run check:unicode && npm run dupes && npm run test:e2e"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -22,14 +24,16 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/jest": "^30.0.0",
     "@types/node": "^26",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
     "baseline-browser-mapping": "^2.11.27",
@@ -46,6 +50,14 @@
     "typescript": "^6"
   },
   "overrides": {
-    "glob": "^13.0.6"
+    "glob": "^13.0.6",
+    "postcss-selector-parser": ">=7.1.6"
+  },
+  "packageManager": "npm@11.19.1",
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "unrs-resolver@1.12.2": true,
+    "esbuild@0.28.2": true,
+    "fsevents@2.3.3": true
   }
 }

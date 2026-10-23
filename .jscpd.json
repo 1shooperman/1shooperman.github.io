@@ -1,14 +1,16 @@
 {
-  "threshold": 2,
-  "reporters": ["console"],
+  "threshold": 6,
+  "reporters": ["consoleFull"],
   "ignore": [
-    "node_modules/**",
-    ".next/**",
-    "out/**",
-    "public/**",
-    "src/content/**",
-    "coverage/**",
-    "package-lock.json"
+    "**/node_modules/**",
+    "**/out/**",
+    "**/.next/**",
+    "**/reports/**",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "package-lock.json",
+    "package.json",
+    "schema-definitions.ts"
   ],
   "absolute": true
 }

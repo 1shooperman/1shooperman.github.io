@@ -12,7 +12,7 @@ excerpt: "When I stepped into my first development role in 2005, I thought I had
 
 A more junior colleague recently asked me: "If you had to give one piece of [professional] advice, what would it be?" Without hesitation, I said: avoid repeating year one. Funny thing, I think about this answer a lot.
 
-When I stepped into my first development role in 2005, I thought I had made it.  This was it, I was set for life now. Convinced that school (read: endless learning) was behind me, I set off on this adventure with no idea how monumental a thing I was starting.  Like any new hire, I struggled at first… production ready code is not the same thing as a graded software lab.
+When I stepped into my first development role in 2005, I thought I had made it.  This was it, I was set for life now. Convinced that school (read: endless learning) was behind me, I set off on this adventure with no idea how monumental a thing I was starting.  Like any new hire, I struggled at first... production ready code is not the same thing as a graded software lab.
 
 After my first year in the role, I thought I was kind of a big deal.  I was well on my way to becoming a team lead. A short while later, I was a "Lead Developer".  Oh man, this was aces. I stayed in this role for a handful of "year ones". I probably wouldn't have left except for an economic downturn relieving me of the role.
 

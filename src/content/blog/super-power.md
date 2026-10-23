@@ -18,7 +18,7 @@ One of my favorite questions is: What's your Superpower?  The question itself ne
 
 > Everyone who joins a team brings something uniquely theirs.  Something no one else has. Something special. I call this your "super power".  What's yours?
 
-Almost everyone smiles at this.  Some of the smiles are uncomfortable, some are amusement, some are simple enjoyment of the question.  Those who don't smile… well, trust that I am going to poke at that before our conversation is done. You can generally gauge someone's level of experience based on their answer to this question.  Whether or not they've had a career of "year ones" or have actually thought about growing in the profession.
+Almost everyone smiles at this.  Some of the smiles are uncomfortable, some are amusement, some are simple enjoyment of the question.  Those who don't smile... well, trust that I am going to poke at that before our conversation is done. You can generally gauge someone's level of experience based on their answer to this question.  Whether or not they've had a career of "year ones" or have actually thought about growing in the profession.
 
 More junior candidates will usually struggle with the question, eventually coming out with the programming language they are most comfortable with.  It's a hard question to answer when your major concern to this point was getting into the profession. It's a hard question to answer when you haven't had to reflect on and articulate your value to the business beyond "I write code".
 

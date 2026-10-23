@@ -41,6 +41,6 @@ Use case: a dedicated critique step in a pipeline--call it with a claim or plan,
 
 I say all of this to highlight something funny that came up in my first run. I had a gemini-backed Critic call respond to a plan written in Cursor (backed by Composer 1.5):
 
-> Conclusion (Critic’s words)
->The plan was called a “blueprint for failure” that “systematically avoids core security challenges” and “punts responsibility.” Critic said no real audit execution should proceed until the critical gaps (especially unauthenticated design, threat modeling, MCP scope, and mandatory baseline scans) are fixed and folded into a “robust, realistic audit methodology.”
->That’s the essence of what Critic said. I can turn this into concrete edits to docs/AUDIT-PLAN.md if you want.
+> Conclusion (Critic's words)
+>The plan was called a "blueprint for failure" that "systematically avoids core security challenges" and "punts responsibility." Critic said no real audit execution should proceed until the critical gaps (especially unauthenticated design, threat modeling, MCP scope, and mandatory baseline scans) are fixed and folded into a "robust, realistic audit methodology."
+>That's the essence of what Critic said. I can turn this into concrete edits to docs/AUDIT-PLAN.md if you want.
