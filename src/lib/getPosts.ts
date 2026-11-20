@@ -6,6 +6,15 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "src/content/blog");
 
+const SAFE_SLUG = /^[A-Za-z0-9_-]+$/;
+
+function assertSafeSlug(slug: string): string {
+  if (!SAFE_SLUG.test(slug)) {
+    throw new Error(`Invalid post slug: ${slug}`);
+  }
+  return slug;
+}
+
 // Define a TypeScript type for a blog post
 export type BlogPost = {
   slug: string;
@@ -24,7 +33,7 @@ export function getSortedPosts(): BlogPost[] {
     const { data } = matter(fileContents);
 
     return {
-      slug: fileName.replace(/\.md$/, ""),
+      slug: assertSafeSlug(fileName.replace(/\.md$/, "")),
       title: data.title as string,
       date: data.date as string,
       excerpt: (data.excerpt ?? "") as string,
@@ -36,6 +45,7 @@ export function getSortedPosts(): BlogPost[] {
 
 // Fetch a single blog post by slug
 export async function getPostBySlug(slug: string) {
+  assertSafeSlug(slug);
   const filePath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
 
