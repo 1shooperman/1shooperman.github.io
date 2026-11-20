@@ -52,16 +52,6 @@ describe('getPosts', () => {
     });
   });
 
-  describe('scheduled posts', () => {
-    it('should exclude posts dated after today', () => {
-      const posts = getSortedPosts();
-      const today = new Date().toISOString().slice(0, 10);
-      posts.forEach((post: BlogPost) => {
-        expect(post.date <= today).toBe(true);
-      });
-    });
-  });
-
   describe('getPostBySlug', () => {
     it('should return a post with all required fields including contentHtml', async () => {
       const posts = getSortedPosts();

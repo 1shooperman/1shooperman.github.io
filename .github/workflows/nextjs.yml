@@ -21,11 +21,11 @@ on:
           - patch
         default: minor
 
-  # Friday 5am EST rebuild so Thursday-dated posts go live on their own.
-  # Cron is UTC and fixed (no DST), so this fires 4am EDT during daylight saving.
+  # Daily rebuild so scheduled posts go live on their own date.
+  # Cron is UTC and fixed (no DST): 10:00 UTC is 5am EST / 6am EDT.
   # The release job is skipped on this trigger: a rebuild is not a release.
   schedule:
-    - cron: '0 10 * * 5'
+    - cron: '0 10 * * *'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:

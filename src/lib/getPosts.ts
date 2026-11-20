@@ -15,6 +15,17 @@ function assertSafeSlug(slug: string): string {
   return slug;
 }
 
+// gray-matter parses an unquoted YAML date into a Date; normalise to YYYY-MM-DD
+function normalizeDate(value: unknown, slug: string): string {
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return value.toISOString().slice(0, 10);
+  }
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}/.test(value)) {
+    return value;
+  }
+  throw new Error(`Post ${slug} has a missing or invalid date`);
+}
+
 // Define a TypeScript type for a blog post
 export type BlogPost = {
   slug: string;
@@ -32,11 +43,12 @@ export function getSortedPosts(): BlogPost[] {
     const filePath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
+    const slug = assertSafeSlug(fileName.replace(/\.md$/, ""));
 
     return {
-      slug: assertSafeSlug(fileName.replace(/\.md$/, "")),
+      slug,
       title: data.title as string,
-      date: data.date as string,
+      date: normalizeDate(data.date, slug),
       excerpt: (data.excerpt ?? "") as string,
     };
   });
@@ -59,7 +71,7 @@ export async function getPostBySlug(slug: string) {
   return {
     slug,
     title: data.title as string,
-    date: data.date as string,
+    date: normalizeDate(data.date, slug),
     excerpt: (data.excerpt ?? "") as string,
     contentHtml,
   };
