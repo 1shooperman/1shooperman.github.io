@@ -23,9 +23,10 @@ export type BlogPost = {
   excerpt: string;
 };
 
-// Fetch all blog posts and sort by date
+// Fetch all published blog posts (dated today or earlier) and sort by date
 export function getSortedPosts(): BlogPost[] {
   const fileNames = fs.readdirSync(postsDirectory);
+  const today = new Date().toISOString().slice(0, 10);
 
   const allPosts = fileNames.map((fileName) => {
     const filePath = path.join(postsDirectory, fileName);
@@ -40,7 +41,9 @@ export function getSortedPosts(): BlogPost[] {
     };
   });
 
-  return allPosts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPosts
+    .filter((post) => post.date <= today)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 // Fetch a single blog post by slug
